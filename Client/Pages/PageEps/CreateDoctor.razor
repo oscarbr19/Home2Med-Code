@@ -1,0 +1,19 @@
+@page "/eps/createdoctor"
+@using Home2Med.Client.Pages.Components
+
+<FormDoctor Doctor = "Doctor" OnValidSubmit="Create"></FormDoctor>
+
+@code {
+   private Doctor Doctor = new Doctor();
+   void Create()
+   {
+      Console.WriteLine($"Nombre {Doctor.Name}");
+      Console.WriteLine($"Tipo de Documento {Doctor.DocumentType}");
+      Console.WriteLine($"Documento {Doctor.Document}");
+      Console.WriteLine($"Genero {Doctor.Gender}");
+      Console.WriteLine($"Telefono {Doctor.Phone}");
+      Console.WriteLine($"Especialidad {Doctor.Speciality}");
+      Console.WriteLine($"Estado {Doctor.Status}");
+
+   }
+}

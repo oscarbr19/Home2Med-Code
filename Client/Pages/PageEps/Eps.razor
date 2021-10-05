@@ -1,0 +1,65 @@
+@page "/eps"
+
+@* Estilos particulares para el navbar *@
+<style type="text/css">
+   .bg-prima {
+      background-color: #b9e6eb !important
+   }
+
+   .bg-h2m {
+      background-color: #b9e6c1 !important
+   }
+
+</style>
+
+<nav class="navbar navbar-expand-sm navbar-h2m bg-prima">
+   <div class="container">
+      <a class="navbar-brand" href="#">E P S</a>
+      <ul class="navbar-nav">
+         <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> Paciente</a>
+            <div class="dropdown-menu bg-h2m">
+               <a href="eps/createpatient" class="dropdown-item">Crear</a>
+               <a href="eps/readpatient" class="dropdown-item">Buscar</a>
+               <a href="eps/updatepatient" class="dropdown-item">Editar</a>
+               <a href="eps/deletepatient" class="dropdown-item">Novedad</a>
+            </div>
+         </li>
+         <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> Familiar</a>
+            <div class="dropdown-menu bg-h2m">
+               <a href="eps/createfamily" class="dropdown-item">Crear</a>
+               <a href="eps/readfamily" class="dropdown-item">Buscar</a>
+               <a href="eps/updatefamily" class="dropdown-item">Editar</a>
+               <a href="eps/deletefamily" class="dropdown-item">Retirar</a>
+            </div>
+         </li>
+         <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> Medico</a>
+            <div class="dropdown-menu bg-h2m">
+               <a href="eps/createdoctor" class="dropdown-item">Crear</a>
+               <a href="eps/readdoctor" class="dropdown-item">Buscar</a>
+               <a href="eps/updatedoctor" class="dropdown-item">Editar</a>
+               <a href="eps/deletedoctor" class="dropdown-item">Retirar</a>
+            </div>
+         </li>
+         <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> Enfermera</a>
+            <div class="dropdown-menu bg-h2m">
+               <a href="eps/createnurse" class="dropdown-item">Crear</a>
+               <a href="eps/readnurse" class="dropdown-item">Buscar</a>
+               <a href="eps/updatenurse" class="dropdown-item">Editar</a>
+               <a href="eps/deletenurse" class="dropdown-item">Retirar</a>
+            </div>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+         </li>
+      </ul>
+   </div>
+</nav>
+<hr>
+
+<div class="jumbotron">
+   <div><img src="/Images/foto06.png" class="d-block w-100" alt="..."></div>
+</div>

@@ -1,0 +1,94 @@
+@page "/eps/createnurse"
+
+@* Estilos particulares para el navbar *@
+<style type="text/css">
+   .bg-prima {
+      background-color: #b9e6eb !important
+   }
+
+   .bg-h2m {
+      background-color: #b9e6c1 !important
+   }
+</style>
+
+<nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-3">
+   <div class="container">
+      <a class="navbar-brand" href="#">E P S - Creación Enfermera</a>
+   </div>
+</nav>
+
+<div class="row justify-content-center align-items-center">
+   <div class="jumbotron col-8">
+      <div class="form-group ml-4 mb-2 col-11">
+         <p class="mb-0"><strong>Nombres y Apellidos</strong></p>
+         <input type="text" class="form-control" id="patient_name" placeholder="Ingresar Nombres y Apellidos" />
+         @*  @bind-Value="movie_name" @bind-Value:event="oninput"
+            @onkeypress="@((KeyboardEventArgs e)=>MovieSearch(e))" class="form-control" id="movie_name" *@
+      </div>
+      <div class="row">
+         <div class="form-group ml-5 mb-2 col-5">
+            <p class="mb-0"><strong>Tipo Documento</strong></p>
+            <select class="form-control"> @* @bind="categorySelected"*@
+               <option value="0">Selecciona un Tipo Documento</option>
+               <option value="1">Cédula de Ciudadanía</option>
+               <option value="2">Cédula de Extranjería</option>
+               @* @foreach (var item in categories)
+                  {
+                  <option value="@item.Id">@item.Name</option>
+                  }
+               *@
+            </select>
+         </div>
+         <div class="form-group ml-1 mb-2 col-5">
+            <p class="mb-0"><strong>Número de Documento</strong></p>
+            <input type="text" class="form-control" id="patient_name" placeholder="Ingresar Número de Documento" />
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="form-group ml-5 mb-2 col-5">
+            <p class="mb-0"><strong>Genero</strong></p>
+            <select class="form-control"> @* @bind="categorySelected"*@
+               <option value="0">Selecciona Genero</option>
+               <option value="1">Femenino</option>
+               <option value="0">Masculino</option>
+               @* @foreach (var item in categories)
+                  {
+                  <option value="@item.Id">@item.Name</option>
+                  }
+               *@
+            </select>
+         </div>
+         <div class="form-group ml-1 mb-2 col-5">
+            <p class="mb-0"><strong>Número de Contacto</strong></p>
+            <input type="text" class="form-control" id="patient_name" placeholder="Ingresar Número de Contacto" />
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="form-group ml-5 mb-2 col-5">
+            <p class="mb-0"><strong>Especialidad Enfermera</strong></p>
+            <select class="form-control"> @* @bind="categorySelected"*@
+               <option value="0">Selecciona una Opción</option>
+               <option value="1">Especialidad Enfermera 1</option>
+               <option value="2">Especialidad Enfermera 2</option>
+               <option value="3">Especialidad Enfermera 3</option>
+               <option value="4">Especialidad Enfermera 4</option>
+               @* @foreach (var item in categories)
+                  {
+                  <option value="@item.Id">@item.Name</option>
+                  }
+               *@
+            </select>
+         </div>
+      </div>
+      <div>
+         <button type="button" class="btn btn-success mt-4 mb-2 ml-5">Guardar</button> 
+         @* @onclick="ShowMovies"*@
+         <button type="button" class="btn btn-danger mt-4 mb-2 ml-3" >Limpiar campos</button>
+         @*@onclick="ClearInputs"*@
+      </div>
+
+
+   </div>
+</div>
