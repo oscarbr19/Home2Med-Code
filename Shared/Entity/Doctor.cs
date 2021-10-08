@@ -19,7 +19,7 @@ namespace Home2Med.Shared.Entity
        public int Gender {get;set;}   
        [Required(ErrorMessage ="El campo es requerido")]
        public string Phone {get;set;}
-       [Range(1,9,ErrorMessage ="Seleccione una opción")]
+       [Range(1,99,ErrorMessage ="Seleccione una opción")]
        public int Speciality {get;set;}
        public string Photo { get; set; }
        public bool Status {get;set;}

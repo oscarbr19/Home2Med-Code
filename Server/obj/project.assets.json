@@ -879,11 +879,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Home2Med\\Home2Med-Code\\Server\\Home2Med.Server.csproj",
+      "projectUniqueName": "F:\\Home2Med\\clone\\Home2Med-Code\\Server\\Home2Med.Server.csproj",
       "projectName": "Home2Med.Server",
-      "projectPath": "F:\\Home2Med\\Home2Med-Code\\Server\\Home2Med.Server.csproj",
+      "projectPath": "F:\\Home2Med\\clone\\Home2Med-Code\\Server\\Home2Med.Server.csproj",
       "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
-      "outputPath": "F:\\Home2Med\\Home2Med-Code\\Server\\obj\\",
+      "outputPath": "F:\\Home2Med\\clone\\Home2Med-Code\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -898,11 +898,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\Home2Med\\Home2Med-Code\\Client\\Home2Med.Client.csproj": {
-              "projectPath": "F:\\Home2Med\\Home2Med-Code\\Client\\Home2Med.Client.csproj"
+            "F:\\Home2Med\\clone\\Home2Med-Code\\Client\\Home2Med.Client.csproj": {
+              "projectPath": "F:\\Home2Med\\clone\\Home2Med-Code\\Client\\Home2Med.Client.csproj"
             },
-            "F:\\Home2Med\\Home2Med-Code\\Shared\\Home2Med.Shared.csproj": {
-              "projectPath": "F:\\Home2Med\\Home2Med-Code\\Shared\\Home2Med.Shared.csproj"
+            "F:\\Home2Med\\clone\\Home2Med-Code\\Shared\\Home2Med.Shared.csproj": {
+              "projectPath": "F:\\Home2Med\\clone\\Home2Med-Code\\Shared\\Home2Med.Shared.csproj"
             }
           }
         }

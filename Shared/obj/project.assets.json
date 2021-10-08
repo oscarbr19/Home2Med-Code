@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Home2Med\\Home2Med-Code\\Shared\\Home2Med.Shared.csproj",
+      "projectUniqueName": "F:\\Home2Med\\clone\\Home2Med-Code\\Shared\\Home2Med.Shared.csproj",
       "projectName": "Home2Med.Shared",
-      "projectPath": "F:\\Home2Med\\Home2Med-Code\\Shared\\Home2Med.Shared.csproj",
+      "projectPath": "F:\\Home2Med\\clone\\Home2Med-Code\\Shared\\Home2Med.Shared.csproj",
       "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
-      "outputPath": "F:\\Home2Med\\Home2Med-Code\\Shared\\obj\\",
+      "outputPath": "F:\\Home2Med\\clone\\Home2Med-Code\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config"

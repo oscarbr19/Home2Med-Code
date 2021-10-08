@@ -1,0 +1,77 @@
+<div class="jumbotron1 col-9">
+   <div class="container"></div>
+   <div class="row mb-3">
+      @foreach (var nurse in Nurses)
+      {
+         <div class="col-md-4">
+            <div class="card flex-md-row mb-4 box-shadow h-md-300">
+               <div class="card-body d-flex flex-column align-items-start bg-h2m">
+                  <div class="card">
+                     <img src="@nurse.NursePhoto" class="img-thumbnail card-img-top">
+                     <div class="card-body">
+                        <h6 class="card-title">@nurse.NurseName</h6>
+                        <p class="text-muted">
+
+                           @if (@nurse.NurseDocumentType == 1)
+                           {
+                              RTypeDoct = "Cédula Ciudadanía";
+                           }
+                           else if (@nurse.NurseDocumentType == 2)
+                           {
+                              RTypeDoct = "Cédula Extranjería";
+                           }
+                           else
+                           {
+                              RTypeDoct = "Pasaporte";
+                           }
+                           @RTypeDoct
+                           <small>@nurse.NurseDocument</small>
+                           <br>
+
+                           @if (@nurse.NurseSpeciality == 1)
+                           {
+                              RSpeciality = "Especialidad Enfermería 1";
+                           }
+                           else if (@nurse.NurseSpeciality == 2)
+                           {
+                              RSpeciality = "Especialidad Enfermería 2";
+                           }
+                           else if (@nurse.NurseSpeciality == 3)
+                           {
+                              RSpeciality = "Especialidad Enfermería 3";
+                           }
+                           else
+                           {
+                              RSpeciality = "Especialidad Enfermería 4";
+                           }
+                           @RSpeciality
+                           <br>
+                           @nurse.Id
+                        </p>
+                     </div>
+                  </div>
+                  <div>
+                     <button @onclick="NurseEdit">Editar</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      }
+   </div>
+</div>
+
+
+@code {
+
+   string RTypeDoct, RSpeciality;
+
+   [Parameter] public List<Nurse> Nurses { get; set; }
+   [Parameter] public int Id { get; set; }
+   [Parameter] public string Name { get; set; }
+
+   void NurseEdit()
+   {
+      Console.WriteLine($"Editando info Enfermera ");
+   }
+
+}

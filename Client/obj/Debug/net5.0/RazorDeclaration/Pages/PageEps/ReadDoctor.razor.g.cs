@@ -13,91 +13,91 @@ namespace Home2Med.Client.Pages.PageEps
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "F:\Home2Med\Home2Med-Code-1\Client\_Imports.razor"
+#line 1 "F:\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "F:\Home2Med\Home2Med-Code-1\Client\_Imports.razor"
+#line 2 "F:\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "F:\Home2Med\Home2Med-Code-1\Client\_Imports.razor"
+#line 3 "F:\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "F:\Home2Med\Home2Med-Code-1\Client\_Imports.razor"
+#line 4 "F:\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "F:\Home2Med\Home2Med-Code-1\Client\_Imports.razor"
+#line 5 "F:\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "F:\Home2Med\Home2Med-Code-1\Client\_Imports.razor"
+#line 6 "F:\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "F:\Home2Med\Home2Med-Code-1\Client\_Imports.razor"
+#line 7 "F:\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "F:\Home2Med\Home2Med-Code-1\Client\_Imports.razor"
+#line 8 "F:\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "F:\Home2Med\Home2Med-Code-1\Client\_Imports.razor"
+#line 9 "F:\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "F:\Home2Med\Home2Med-Code-1\Client\_Imports.razor"
+#line 10 "F:\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "F:\Home2Med\Home2Med-Code-1\Client\_Imports.razor"
+#line 11 "F:\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Shared.Entity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "F:\Home2Med\Home2Med-Code-1\Client\_Imports.razor"
+#line 12 "F:\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Client.Services;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "F:\Home2Med\Home2Med-Code-1\Client\Pages\PageEps\ReadDoctor.razor"
+#line 2 "F:\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\ReadDoctor.razor"
 using Home2Med.Client.Pages.Components;
 
 #line default
@@ -112,7 +112,7 @@ using Home2Med.Client.Pages.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 30 "F:\Home2Med\Home2Med-Code-1\Client\Pages\PageEps\ReadDoctor.razor"
+#line 30 "F:\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\ReadDoctor.razor"
        
    private List<Doctor> Doctors;
    string doctor_name = "";
@@ -134,7 +134,7 @@ using Home2Med.Client.Pages.Components;
 #line hidden
 #nullable disable
 #nullable restore
-#line 53 "F:\Home2Med\Home2Med-Code-1\Client\Pages\PageEps\ReadDoctor.razor"
+#line 53 "F:\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\ReadDoctor.razor"
          
 
    private void DoctorSearch(KeyboardEventArgs e)
