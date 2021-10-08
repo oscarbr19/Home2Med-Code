@@ -1,3 +1,82 @@
 @page "/eps/readdoctor"
+@using Home2Med.Client.Pages.Components
+@inject IServiceDoctor doctor
+@* Estilos particulares para el navbar *@
+<style type="text/css">
+   .bg-prima {
+      background-color: #b9e6eb !important
+   }
 
-<h4>EPS Read Doctor</h4>
+   .bg-h2m {
+      background-color: #b9e6c1 !important
+   }
+   .jumbotron1 {
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+      background-color: #4046cc;
+      border-radius: 1.9rem
+   }
+   .btn-primary1 {
+      background-color: #b9e6eb
+   }
+</style>
+
+<nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-3">
+   <div class="container">
+      <a class="navbar-brand" href="#"><strong>E P S - Buscar Médico</strong></a>
+   </div>
+</nav>
+
+<div class="row justify-content-center align-items-center">
+   <div class="jumbotron1 col-8">
+      @* Campo en el cual el usuario ingresa el nombre del doctor en la lista de objetos de la interfaz o servicio
+      *@
+      <div class="form-group ml-4 mb-2 col-9">
+         <p class="mb-0"><strong>Nombres y Apellidos</strong></p>
+         <input type="text" @bind-Value="doctor_name" @bind-Value:event="oninput"
+            @onkeypress="@((KeyboardEventArgs e)=>DoctorSearch(e))" class="form-control" id="doctor_name"
+            placeholder="Buscar Médico" />
+      </div>
+      <div>
+         <button type="button" class="btn btn-success mb-1 ml-5" @onclick="ShowDoctors">Buscar</button>
+      </div>
+   </div>
+   <ServiceDoctors Doctors="Doctors"></ServiceDoctors>
+</div>
+
+
+
+@code {
+   private List<Doctor> Doctors;
+   string doctor_name = "";
+
+   protected override void OnInitialized()
+   {
+      Doctors = doctor.GetDoctors();
+   }
+
+   private void ShowDoctors()
+   {
+      Doctors = doctor.GetDoctors().Where(x => x.Name.ToLower().Contains(doctor_name.ToLower())).ToList();
+      Console.WriteLine($"El médico es: {doctor_name}");
+   }
+
+   @*
+      private void ClearInputs(){
+      Doctors = doctor.GetDoctors();
+      doctor_name = "";
+      categorySelected = "0";
+      futurosEstrenos = false;
+      enCartelera = false;
+      mejorCalificada = false;
+      }*@
+
+   private void DoctorSearch(KeyboardEventArgs e)
+   {
+      if (e.Key == "Enter")
+      {
+         ShowDoctors();
+      }
+   }
+
+}
