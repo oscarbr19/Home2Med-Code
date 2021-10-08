@@ -104,7 +104,7 @@ using Home2Med.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 93 "F:\Home2Med\Home2Med-Code-1\Client\Pages\Components\FormDoctor.razor"
+#line 84 "F:\Home2Med\Home2Med-Code-1\Client\Pages\Components\FormDoctor.razor"
        
 
 

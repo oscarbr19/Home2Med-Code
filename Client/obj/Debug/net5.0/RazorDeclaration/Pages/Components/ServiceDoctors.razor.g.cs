@@ -104,9 +104,20 @@ using Home2Med.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "F:\Home2Med\Home2Med-Code-1\Client\Pages\Components\ServiceDoctors.razor"
+#line 54 "F:\Home2Med\Home2Med-Code-1\Client\Pages\Components\ServiceDoctors.razor"
        
+
+   string RTypeDoct, RSpeciality;
+
    [Parameter] public List<Doctor> Doctors { get; set; }
+       [Parameter] public int MovieId {get;set;}
+   [Parameter] public string Name {get;set;}
+
+      void DoctorEdit()
+   {
+      Console.WriteLine($"Editando info Medico  ");
+   }
+
 
 #line default
 #line hidden
