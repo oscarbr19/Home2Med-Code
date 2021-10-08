@@ -112,7 +112,7 @@ using Home2Med.Client.Pages.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 49 "F:\Home2Med\Home2Med-Code-1\Client\Pages\PageEps\ReadDoctor.razor"
+#line 30 "F:\Home2Med\Home2Med-Code-1\Client\Pages\PageEps\ReadDoctor.razor"
        
    private List<Doctor> Doctors;
    string doctor_name = "";
@@ -134,7 +134,7 @@ using Home2Med.Client.Pages.Components;
 #line hidden
 #nullable disable
 #nullable restore
-#line 72 "F:\Home2Med\Home2Med-Code-1\Client\Pages\PageEps\ReadDoctor.razor"
+#line 53 "F:\Home2Med\Home2Med-Code-1\Client\Pages\PageEps\ReadDoctor.razor"
          
 
    private void DoctorSearch(KeyboardEventArgs e)

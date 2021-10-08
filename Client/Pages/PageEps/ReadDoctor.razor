@@ -1,25 +1,6 @@
 @page "/eps/readdoctor"
 @using Home2Med.Client.Pages.Components
 @inject IServiceDoctor doctor
-@* Estilos particulares para el navbar *@
-<style type="text/css">
-   .bg-prima {
-      background-color: #b9e6eb !important
-   }
-
-   .bg-h2m {
-      background-color: #b9e6c1 !important
-   }
-   .jumbotron1 {
-      padding: 2rem 1rem;
-      margin-bottom: 2rem;
-      background-color: #4046cc;
-      border-radius: 1.9rem
-   }
-   .btn-primary1 {
-      background-color: #b9e6eb
-   }
-</style>
 
 <nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-3">
    <div class="container">
@@ -28,13 +9,13 @@
 </nav>
 
 <div class="row justify-content-center align-items-center">
-   <div class="jumbotron1 col-8">
+   <div class="jumbotron1 col-9">
       @* Campo en el cual el usuario ingresa el nombre del doctor en la lista de objetos de la interfaz o servicio
       *@
-      <div class="form-group ml-4 mb-2 col-9">
+      <div class="form-group ml-4 mb-2 col-8">
          <p class="mb-0"><strong>Nombres y Apellidos</strong></p>
          <input type="text" @bind-Value="doctor_name" @bind-Value:event="oninput"
-            @onkeypress="@((KeyboardEventArgs e)=>DoctorSearch(e))" class="form-control" id="doctor_name"
+            @onkeypress="@((KeyboardEventArgs e)=>DoctorSearch(e))" class="form-control col-11" id="doctor_name"
             placeholder="Buscar Médico" />
       </div>
       <div>

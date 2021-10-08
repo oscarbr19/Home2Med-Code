@@ -22,3 +22,15 @@ F:\Home2Med\Home2Med-Code-1\Shared\obj\Debug\net5.0\Home2Med.Shared.csproj.CoreC
 F:\Home2Med\Home2Med-Code-1\Shared\obj\Debug\net5.0\Home2Med.Shared.dll
 F:\Home2Med\Home2Med-Code-1\Shared\obj\Debug\net5.0\ref\Home2Med.Shared.dll
 F:\Home2Med\Home2Med-Code-1\Shared\obj\Debug\net5.0\Home2Med.Shared.pdb
+F:\Home2Med\Home2Med-Code\Shared\bin\Debug\net5.0\Home2Med.Shared.deps.json
+F:\Home2Med\Home2Med-Code\Shared\bin\Debug\net5.0\Home2Med.Shared.dll
+F:\Home2Med\Home2Med-Code\Shared\bin\Debug\net5.0\ref\Home2Med.Shared.dll
+F:\Home2Med\Home2Med-Code\Shared\bin\Debug\net5.0\Home2Med.Shared.pdb
+F:\Home2Med\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.csproj.AssemblyReference.cache
+F:\Home2Med\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.GeneratedMSBuildEditorConfig.editorconfig
+F:\Home2Med\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.AssemblyInfoInputs.cache
+F:\Home2Med\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.AssemblyInfo.cs
+F:\Home2Med\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.csproj.CoreCompileInputs.cache
+F:\Home2Med\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.dll
+F:\Home2Med\Home2Med-Code\Shared\obj\Debug\net5.0\ref\Home2Med.Shared.dll
+F:\Home2Med\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.pdb

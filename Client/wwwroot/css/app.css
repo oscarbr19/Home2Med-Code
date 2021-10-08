@@ -48,3 +48,18 @@ a, .btn-link {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+    .bg-prima {
+      background-color: #b9e6eb !important
+   }
+
+   .bg-h2m {
+      background-color: #87e6a7 !important
+   }
+
+   .jumbotron1 {
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+      background-color: #cfcece;
+      border-radius: 2rem
+   }
