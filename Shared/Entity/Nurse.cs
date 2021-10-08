@@ -1,36 +1,28 @@
-using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
+using System.Collections.Generic;
+using System;
 
-namespace Shared.Entity
+
+namespace Home2Med.Shared.Entity
 {
     public class Nurse
     {
        public int Id {get;set;}
        [Required(ErrorMessage ="El campo {0} es requerido")]
-       public string Name{get;set;}
-       public NurseDocumentType NurseDocumentType { get; set; }
-       public string Document { get; set; }
-       public NurseGender NurseGender { get; set; }   
-       public string Phone {get;set;}
-       public NurseSpeciality NurseSpeciality {get;set;}
-       public string Photo { get; set; }
-       public bool Status {get;set;}
+       public string NurseName{get;set;}
+       [Range(1,4,ErrorMessage ="Seleccione una opción")]       
+       public int NurseDocumentType { get; set; }
+       [Required(ErrorMessage ="El campo {0} es requerido")]
+       public string NurseDocument { get; set; }
+       [Range(1,2,ErrorMessage ="Seleccione una opción")]       
+       public int NurseGender { get; set; }   
+       [Required(ErrorMessage ="El campo {0} es requerido")]
+       public string NursePhone {get;set;}
+       [Range(1,99,ErrorMessage ="Seleccione una opción")]
+       public int NurseSpeciality {get;set;}
+       public string NursePhoto { get; set; }
+       public bool NurseStatus {get;set;}
     }
-   public enum NurseDocumentType
-   {
-      CedulaCiudadania  = 0,
-      CedulaExtranjeria = 1
-   }
-   public enum NurseGender
-   {
-      Femenino = 0,
-      Masculino = 1
-   }
-   public enum NurseSpeciality
-   {
-      General = 0,
-      Respiratoria = 1,
-      CuidadosIntensivos = 2
-   }
-
+  
 }

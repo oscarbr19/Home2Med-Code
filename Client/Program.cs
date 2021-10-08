@@ -1,3 +1,5 @@
+using System.Collections.Immutable;
+using System.ComponentModel.Design;
 using System;
 using System.Net.Http;
 using System.Collections.Generic;
@@ -24,6 +26,7 @@ namespace Home2Med.Client
         }
         private static void ConfigureServices(IServiceCollection services){
             services.AddSingleton<IServiceDoctor,ServiceDoctor>();
+            services.AddSingleton<IServiceNurse,ServiceNurse>();
         }
 
     }
