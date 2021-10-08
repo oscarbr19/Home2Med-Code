@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d7fzrmeibdUjeLNlxA+jvzWHJpBBy29vTOfHUkTv0LQMCLiN7ZPfEj3Psk73y26+iORRvCm77nhv32fBE77q5A==",
+  "dgSpecHash": "8HVr6iYM7VIW4RRaPpqDsqepYG+U+4wZFDkP7knL6vyhiynX+v3/jAHbQZdN2ZUfOs268RXzzvTPJJJ3EQmSDA==",
   "success": true,
-  "projectFilePath": "F:\\Home2Med\\Server\\Home2Med.Server.csproj",
+  "projectFilePath": "F:\\Home2Med\\Home2Med-Code-1\\Server\\Home2Med.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jorge\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.10\\microsoft.aspnetcore.authorization.5.0.10.nupkg.sha512",
     "C:\\Users\\jorge\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.10\\microsoft.aspnetcore.components.5.0.10.nupkg.sha512",
