@@ -196,12 +196,12 @@
       "netstandard.dll": "sha256-5TcSqPhm3fAT6s3NH7+BMGakcfGgZGd3\/\/cVwVs2VPI=",
       "System.Private.CoreLib.dll": "sha256-VJv3DLM\/G0m\/RnTeWL9X8mkbxlsn8nNRhm0BHYEY+uo=",
       "Home2Med.Shared.dll": "sha256-4NO3gmqTVZ108cT4MPalAjWDRyeU4Wxy7XEB9bG+yRY=",
-      "Home2Med.Client.dll": "sha256-I+CY\/pl5Fm4NdaJVRIjZkxyw32sh6jf3HMyL3ekJBdc="
+      "Home2Med.Client.dll": "sha256-a+NMRHShUjsQz1umOYeUC1PSjrkdzh800Tll47zOuoM="
     },
     "lazyAssembly": null,
     "pdb": {
       "Home2Med.Shared.pdb": "sha256-bdshOaU7W7Cx7hDS5fDwv6i\/a\/iTz8iAlujTGYUL0q4=",
-      "Home2Med.Client.pdb": "sha256-bPhLmXv9L+FcW5pqLXAD7PBfuHWrFEtHNs9IlY8kPwI="
+      "Home2Med.Client.pdb": "sha256-X0iorgGNzpbn9dv68AdyXR+bygQBw8XAWvuNddrzwX8="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-PvlHrby1PYtdX46ITs6pB8iDNqXNcewh8Eoa\/Gm2+GM=",

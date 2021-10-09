@@ -58,3 +58,15 @@ C:\Home2Med-Clone\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.csproj.C
 C:\Home2Med-Clone\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.dll
 C:\Home2Med-Clone\Home2Med-Code\Shared\obj\Debug\net5.0\ref\Home2Med.Shared.dll
 C:\Home2Med-Clone\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.pdb
+C:\Users\oscar\Downloads\Home2Med-Code\Shared\bin\Debug\net5.0\Home2Med.Shared.deps.json
+C:\Users\oscar\Downloads\Home2Med-Code\Shared\bin\Debug\net5.0\Home2Med.Shared.dll
+C:\Users\oscar\Downloads\Home2Med-Code\Shared\bin\Debug\net5.0\ref\Home2Med.Shared.dll
+C:\Users\oscar\Downloads\Home2Med-Code\Shared\bin\Debug\net5.0\Home2Med.Shared.pdb
+C:\Users\oscar\Downloads\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.csproj.AssemblyReference.cache
+C:\Users\oscar\Downloads\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oscar\Downloads\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.AssemblyInfoInputs.cache
+C:\Users\oscar\Downloads\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.AssemblyInfo.cs
+C:\Users\oscar\Downloads\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.csproj.CoreCompileInputs.cache
+C:\Users\oscar\Downloads\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.dll
+C:\Users\oscar\Downloads\Home2Med-Code\Shared\obj\Debug\net5.0\ref\Home2Med.Shared.dll
+C:\Users\oscar\Downloads\Home2Med-Code\Shared\obj\Debug\net5.0\Home2Med.Shared.pdb
