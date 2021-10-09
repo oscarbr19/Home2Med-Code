@@ -874,19 +874,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jorge\\.nuget\\packages\\": {}
+    "C:\\Users\\oscar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Home2Med\\clone\\Home2Med-Code\\Server\\Home2Med.Server.csproj",
+      "projectUniqueName": "C:\\Home2Med-Clone\\Home2Med-Code\\server\\Home2Med.Server.csproj",
       "projectName": "Home2Med.Server",
-      "projectPath": "F:\\Home2Med\\clone\\Home2Med-Code\\Server\\Home2Med.Server.csproj",
-      "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
-      "outputPath": "F:\\Home2Med\\clone\\Home2Med-Code\\Server\\obj\\",
+      "projectPath": "C:\\Home2Med-Clone\\Home2Med-Code\\server\\Home2Med.Server.csproj",
+      "packagesPath": "C:\\Users\\oscar\\.nuget\\packages\\",
+      "outputPath": "C:\\Home2Med-Clone\\Home2Med-Code\\server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\oscar\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -898,11 +898,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "F:\\Home2Med\\clone\\Home2Med-Code\\Client\\Home2Med.Client.csproj": {
-              "projectPath": "F:\\Home2Med\\clone\\Home2Med-Code\\Client\\Home2Med.Client.csproj"
+            "C:\\Home2Med-Clone\\Home2Med-Code\\Client\\Home2Med.Client.csproj": {
+              "projectPath": "C:\\Home2Med-Clone\\Home2Med-Code\\Client\\Home2Med.Client.csproj"
             },
-            "F:\\Home2Med\\clone\\Home2Med-Code\\Shared\\Home2Med.Shared.csproj": {
-              "projectPath": "F:\\Home2Med\\clone\\Home2Med-Code\\Shared\\Home2Med.Shared.csproj"
+            "C:\\Home2Med-Clone\\Home2Med-Code\\Shared\\Home2Med.Shared.csproj": {
+              "projectPath": "C:\\Home2Med-Clone\\Home2Med-Code\\Shared\\Home2Med.Shared.csproj"
             }
           }
         }
@@ -940,7 +940,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

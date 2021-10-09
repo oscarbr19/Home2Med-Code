@@ -1,0 +1,63 @@
+@page "/eps/readrelative"
+@using Home2Med.Client.Pages.Components
+@inject IServiceRelative relative
+
+<nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-3">
+   <div class="container">
+      <a class="navbar-brand" href="#"><strong>E P S - Buscar Familiar del Paciente</strong></a>
+   </div>
+</nav>
+
+<div class="row justify-content-center align-items-center">
+   <div class="jumbotron1 col-9">
+      @* Campo en el cual el usuario ingresa el nombre del paciente en la lista de objetos de la interfaz o servicio
+      *@
+      <div class="form-group ml-4 mb-2 col-8">
+         <p class="mb-0"><strong>Nombres y Apellidos</strong></p>
+         <input type="text" @bind-Value="relative_name" @bind-Value:event="oninput"
+            @onkeypress="@((KeyboardEventArgs e)=>RelativeSearch(e))" class="form-control col-11" id="relative_name"
+            placeholder="Buscar Familiar del Paciente" />
+      </div>
+      <div>
+         <button type="button" class="btn btn-success mb-1 ml-5" @onclick="ShowRelatives">Buscar</button>
+      </div>
+   </div>
+   <ServiceRelatives Relatives="Relatives"></ServiceRelatives>
+</div>
+
+
+
+@code {
+   private List<Relative> Relatives;
+   string relative_name = "";
+
+   protected override void OnInitialized()
+   {
+      Relatives = relative.GetRelatives();
+   }
+
+   private void ShowRelatives()
+   {
+      Relatives = relative.GetRelatives().Where(x => x.RelativeName.ToLower().Contains(relative_name.ToLower())).ToList();
+      Console.WriteLine($"El familiar del paciente es: {relative_name}");
+   }
+
+   @*
+      private void ClearInputs(){
+      Relatives = realtive.GetRelatives();
+      relative_name = "";
+      categorySelected = "0";
+      futurosEstrenos = false;
+      enCartelera = false;
+      mejorCalificada = false;
+      }*@
+
+   private void RelativeSearch(KeyboardEventArgs e)
+   {
+      if (e.Key == "Enter")
+      {
+         ShowRelatives();
+      }
+   }
+
+}

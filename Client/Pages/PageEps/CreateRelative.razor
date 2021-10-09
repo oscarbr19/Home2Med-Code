@@ -1,0 +1,21 @@
+@page "/eps/createrelative"
+@using Home2Med.Client.Pages.Components
+
+<FormRelative Relative = "Relative" OnValidSubmit="Create"></FormRelative>
+
+@code {
+   private Relative Relative = new Relative();
+   void Create()
+   {
+      Console.WriteLine($"Nombre {Relative.RelativeName}");
+      Console.WriteLine($"Tipo de Documento {Relative.RelativeDocumentType}");
+      Console.WriteLine($"Documento {Relative.RelativeDocument}");
+      Console.WriteLine($"Genero {Relative.RelativeGender}");
+      Console.WriteLine($"Telefono {Relative.RelativePhone}");
+      Console.WriteLine($"Relación con el paciente {Relative.RelativeRelationship}");
+      Console.WriteLine($"Correo Electrónico {Relative.RelativeEmail}");
+      Console.WriteLine($"Documento del Paciente a cargo {Relative.RelativePatientDoc}");
+      Console.WriteLine($"Estado {Relative.RelativeStatus}");
+
+   }
+}

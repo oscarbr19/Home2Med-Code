@@ -1,0 +1,177 @@
+<nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-3">
+   <div class="container">
+      <a class="navbar-brand" href="#"><strong>E P S - Creación Paciente</strong></a>
+   </div>
+</nav>
+
+<div class="row justify-content-center align-items-center">
+    <div class="jumbotron1 col-8">
+        <EditForm Model="Patient" OnValidSubmit="OnValidSubmit">
+            <DataAnnotationsValidator></DataAnnotationsValidator>
+
+            <div class="form-group ml-4 mb-2 col-11">
+                <p class="mb-0"><strong>Nombres y Apellidos</strong></p>
+                <InputText class="form-control" @bind-Value="@Patient.PatientName"
+                    placeholder="Ingresar Nombres y Apellidos">
+                </InputText>
+                <ValidationMessage For="@(()=>Patient.PatientName)"></ValidationMessage>
+            </div>
+
+            <div class="row">
+                <div class="form-group ml-5 mb-2 col-5">
+                    <p class="mb-0"><strong>Tipo Documento</strong></p>
+                    <select class="form-control" name="select" @bind="@Patient.PatientDocumentType">
+                        <option value="0" selected>Seleccione una Opción</option>
+                        <option value="1">Cédula de Ciudadanía</option>
+                        <option value="2">Cédula de Extranjería</option>
+                        <option value="3">Pasaporte</option>
+                    </select>
+                    <ValidationMessage For="@(()=>Patient.PatientDocumentType)"></ValidationMessage>
+                </div>
+
+                <div class="form-group ml-1 mb-2 col-5">
+                    <p class="mb-0"><strong>Número de Documento</strong></p>
+                    <InputText class="form-control" @bind-Value="@Patient.PatientDocument"
+                        placeholder="Ingresar Número de Documento"></InputText>
+                    <ValidationMessage For="@(()=>Patient.PatientDocument)"></ValidationMessage>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group ml-5 mb-2 col-5">
+                    <p class="mb-0"><strong>Genero</strong></p>
+                    <select class="form-control" name="select" @bind="@Patient.PatientGender">
+                        <option value="0" selected>Seleccione una Opción</option>
+                        <option value="1">Femenino</option>
+                        <option value="2">Masculino</option>
+                    </select>
+                    <ValidationMessage For="@(()=>Patient.PatientGender)"></ValidationMessage>
+                </div>
+                <div class="form-group ml-1 mb-2 col-5">
+                    <p class="mb-0"><strong>Número de Contacto</strong></p>
+                    <InputText class="form-control" @bind-Value="@Patient.PatientPhone"
+                        placeholder="Ingresar Número de Contacto"></InputText>
+                    <ValidationMessage For="@(()=>Patient.PatientPhone)"></ValidationMessage>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group ml-5 mb-2 col-5">
+                    <p class="mb-0"><strong>Dirección de Residencia</strong></p>
+                    <InputText class="form-control" @bind-Value="@Patient.PatientAddress"
+                        placeholder="Ingresar Dirección de Residencia"></InputText>
+                    <ValidationMessage For="@(()=>Patient.PatientAddress)"></ValidationMessage>
+                </div>
+
+                <div class="form-group ml-1 mb-2 col-5">
+                    <p class="mb-0"><strong>Georeferenciación</strong></p>
+                    <InputText class="form-control" @bind-Value="@Patient.PatientGeorreferentiation"
+                        placeholder="Ingresar Georeferenciación"></InputText>
+                    <ValidationMessage For="@(()=>Patient.PatientGeorreferentiation)"></ValidationMessage>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="form-group ml-5 mb-2 col-5">
+                    <p class="mb-0"><strong>Diagnóstico</strong></p>
+                    <select class="form-control" name="selected" @bind="Patient.PatientDiagnosis">
+                        <option value="0">Selecciona un Diagnóstico</option>
+                        <option value="1">Enfermedad 1</option>
+                        <option value="2">Enfermedad 2</option>
+                        <option value="3">Enfermedad 3</option>
+                        <option value="4">Enfermedad 4</option>
+                    </select>
+                    <ValidationMessage For="@(()=>Patient.PatientDiagnosis)"></ValidationMessage>
+                </div>
+
+                <div class="form-group ml-1 mb-2 col-5">
+                    <p class="mb-0"><strong>Médico Tratante</strong></p>
+                    <select class="form-control" name="selected" @bind="Patient.PatientDoctor">
+                        <option value="0">Selecciona un Médico Tratante</option>
+                        <option value="1">Médico 1</option>
+                        <option value="2">Médico 2</option>
+                        <option value="3">Médico 3</option>
+                        <option value="4">Médico 4</option>
+                    </select>
+                    <ValidationMessage For="@(()=>Patient.PatientDoctor)"></ValidationMessage>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="form-group ml-5 mb-2 col-5">
+                    <p class="mb-0"><strong>EPS</strong></p>
+                    <InputText class="form-control" @bind-Value="@Patient.PatientEPS"
+                        placeholder="Ingresar EPS a la que pertenece el paciente"></InputText>
+                    <ValidationMessage For="@(()=>Patient.PatientEPS)"></ValidationMessage>
+                </div>
+                <div class="form-group ml-5 mt-4 mb-3">
+                    <input type="checkbox" class="form-check-input" id="estado" @bind="Patient.PatientStatus">
+                    <label class="form-check-label" for="estado">Activo</label>
+                </div>
+            </div>
+
+            <div class="form-group"></div>
+
+            <button class="btn btn-success mt-4 mb-2 ml-5">Guardar</button>
+        </EditForm>
+
+
+    </div>
+</div>
+
+@code {
+
+    public class ListDocumentType
+    {
+        public int IdListDocument { get; set; }
+        public string NameTypeDocument { get; set; }
+    }
+
+    string imageURL;
+
+    [Parameter] public Patient Patient { get; set; }
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+
+    protected override void OnInitialized()
+    {
+        if (!string.IsNullOrEmpty(Patient.PatientPhoto))
+        {
+            imageURL = Patient.PatientPhoto;
+            Patient.PatientPhoto = null;
+        }
+    }
+
+    private void ImageSelected(string imageB64)
+    {
+        Patient.PatientPhoto = imageB64;
+        imageURL = null;
+    }
+
+    public List<ListDocumentType> ListDocument = new List<ListDocumentType>();
+
+    protected override Task OnInitializedAsync()
+    {
+        ListDocumentType cero = new ListDocumentType();
+        cero.IdListDocument = 0;
+        cero.NameTypeDocument = "Seleccione una Opción";
+        ListDocumentType uno = new ListDocumentType();
+        uno.IdListDocument = 1;
+        uno.NameTypeDocument = "Cédula de Ciudadanía";
+        ListDocumentType dos = new ListDocumentType();
+        dos.IdListDocument = 2;
+        dos.NameTypeDocument = "Cédula de Extranjería";
+        ListDocumentType tres = new ListDocumentType();
+        tres.IdListDocument = 3;
+        tres.NameTypeDocument = "Pasaporte";
+
+        ListDocument.Add(cero);
+        ListDocument.Add(uno);
+        ListDocument.Add(dos);
+        ListDocument.Add(tres);
+
+        return base.OnInitializedAsync();
+    }
+
+}

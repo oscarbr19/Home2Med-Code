@@ -27,6 +27,8 @@ namespace Home2Med.Client
         private static void ConfigureServices(IServiceCollection services){
             services.AddSingleton<IServiceDoctor,ServiceDoctor>();
             services.AddSingleton<IServiceNurse,ServiceNurse>();
+            services.AddSingleton<IServicePatient,ServicePatient>();
+            services.AddSingleton<IServiceRelative,ServiceRelative>();
         }
 
     }

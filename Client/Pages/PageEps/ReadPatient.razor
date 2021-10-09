@@ -1,3 +1,63 @@
 @page "/eps/readpatient"
+@using Home2Med.Client.Pages.Components
+@inject IServicePatient patient
 
-<h4>EPS Read Patient</h4>
+<nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-3">
+   <div class="container">
+      <a class="navbar-brand" href="#"><strong>E P S - Buscar Paciente</strong></a>
+   </div>
+</nav>
+
+<div class="row justify-content-center align-items-center">
+   <div class="jumbotron1 col-9">
+      @* Campo en el cual el usuario ingresa el nombre del paciente en la lista de objetos de la interfaz o servicio
+      *@
+      <div class="form-group ml-4 mb-2 col-8">
+         <p class="mb-0"><strong>Nombres y Apellidos</strong></p>
+         <input type="text" @bind-Value="patient_name" @bind-Value:event="oninput"
+            @onkeypress="@((KeyboardEventArgs e)=>PatientSearch(e))" class="form-control col-11" id="patient_name"
+            placeholder="Buscar Paciente" />
+      </div>
+      <div>
+         <button type="button" class="btn btn-success mb-1 ml-5" @onclick="ShowPatients">Buscar</button>
+      </div>
+   </div>
+   <ServicePatients Patients="Patients"></ServicePatients>
+</div>
+
+
+
+@code {
+   private List<Patient> Patients;
+   string patient_name = "";
+
+   protected override void OnInitialized()
+   {
+      Patients = patient.GetPatients();
+   }
+
+   private void ShowPatients()
+   {
+      Patients = patient.GetPatients().Where(x => x.PatientName.ToLower().Contains(patient_name.ToLower())).ToList();
+      Console.WriteLine($"El paciente es: {patient_name}");
+   }
+
+   @*
+      private void ClearInputs(){
+      Patients = patient.GetPatients();
+      patient_name = "";
+      categorySelected = "0";
+      futurosEstrenos = false;
+      enCartelera = false;
+      mejorCalificada = false;
+      }*@
+
+   private void PatientSearch(KeyboardEventArgs e)
+   {
+      if (e.Key == "Enter")
+      {
+         ShowPatients();
+      }
+   }
+
+}
