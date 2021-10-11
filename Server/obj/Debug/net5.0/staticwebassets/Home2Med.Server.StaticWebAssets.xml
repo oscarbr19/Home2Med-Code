@@ -1,5 +1,5 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="C:\Home2Med-Clone\Home2Med-Code\Client\bin\Debug\net5.0\wwwroot\" />
-  <ContentRoot BasePath="/" Path="C:\Home2Med-Clone\Home2Med-Code\Client\obj\Debug\net5.0\scopedcss\bundle\" />
-  <ContentRoot BasePath="/" Path="C:\Home2Med-Clone\Home2Med-Code\Client\wwwroot\" />
+  <ContentRoot BasePath="/" Path="F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="/" Path="F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\wwwroot\" />
 </StaticWebAssets>

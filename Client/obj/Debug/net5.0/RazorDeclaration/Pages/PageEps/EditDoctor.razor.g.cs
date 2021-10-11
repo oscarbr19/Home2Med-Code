@@ -13,105 +13,138 @@ namespace Home2Med.Client.Pages.PageEps
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 1 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 2 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 3 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 4 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 5 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 6 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 7 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 8 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 9 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 10 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 11 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Shared.Entity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 12 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Client.Services;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Home2Med-Clone\Home2Med-Code\Client\Pages\PageEps\UpdateDoctor.razor"
+#line 2 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\EditDoctor.razor"
 using Home2Med.Client.Pages.Components;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/eps/updatedoctor")]
-    public partial class UpdateDoctor : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/eps/editdoctor")]
+    public partial class EditDoctor : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IServiceDoctor doctor { get; set; }
+#nullable restore
+#line 12 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\EditDoctor.razor"
+       
+
+   [Parameter] public int Id { get; set; }
+   public Doctor Doctor; 
+
+   protected override void OnInitialized()
+   {
+
+       Doctor = new Doctor(){
+      
+         Id = 1,
+         Name = "Pedro Piedras",
+         DocumentType = 1,
+         Document = "12345689",
+         Gender = 2,
+         Phone = "3104789632",
+         Speciality = 1,
+         Photo = "/Images/medicos/foto01.jpg",
+         Status = true
+     
+       };
+
+   }   
+
+   private void Edit()
+   {
+      Console.WriteLine($"Editando doctor Id {Doctor.Id}");
+   }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

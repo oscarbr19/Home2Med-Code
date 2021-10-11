@@ -1,0 +1,42 @@
+@page "/eps/editrealtive"
+@page "/eps/editRelative"
+@using Home2Med.Client.Pages.Components
+
+<nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-5">
+   <div class="container">
+      <a class="navbar-brand" href="#"><strong>EPS - Editar Familiar a cargo del Paciente</strong></a>
+   </div>
+</nav>
+
+<FormRelative Relative="Relative" OnValidSubmit="Edit"></FormRelative>
+
+@code {
+
+   [Parameter] public int Id { get; set; }
+   public Relative Relative;
+
+   protected override void OnInitialized()
+   {
+
+      Relative = new Relative()
+      {
+         Id = 6,
+         RelativeName = "Camila Peralta",
+         RelativeDocumentType = 1,
+         RelativeDocument = "20568354",
+         RelativeGender = 2,
+         RelativePhone = "31269854758",
+         RelativeRelationship = 8,
+         RelativeEmail = "camilaperalta1@gmail.com",
+         RelativePatientDoc = "1026556421",
+         RelativePhoto = "/Images/familiares/fotof06.jpg",
+         RelativeStatus = true
+      };
+
+   }
+
+   private void Edit()
+   {
+      Console.WriteLine($"Editando Enfermera Id {Relative.Id}");
+   }
+}
