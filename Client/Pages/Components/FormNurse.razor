@@ -1,11 +1,3 @@
-
-
-<nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-3">
-   <div class="container">
-      <a class="navbar-brand" href="#"><strong>E P S - Creación Enfermera</strong></a>
-   </div>
-</nav>
-
 <div class="row justify-content-center align-items-center">
    <div class="jumbotron1 col-8">
       <EditForm Model="Nurse" OnValidSubmit="OnValidSubmit">
@@ -32,7 +24,8 @@
 
             <div class="form-group ml-1 mb-2 col-5">
                <p class="mb-0"><strong>Número de Documento</strong></p>
-               <InputText class="form-control" @bind-Value="@Nurse.NurseDocument" placeholder="Ingresar Número de Documento"></InputText>
+               <InputText class="form-control" @bind-Value="@Nurse.NurseDocument"
+                  placeholder="Ingresar Número de Documento"></InputText>
                <ValidationMessage For="@(()=>Nurse.NurseDocument)"></ValidationMessage>
             </div>
          </div>
@@ -49,7 +42,8 @@
             </div>
             <div class="form-group ml-1 mb-2 col-5">
                <p class="mb-0"><strong>Número de Contacto</strong></p>
-               <InputText class="form-control" @bind-Value="@Nurse.NursePhone" placeholder="Ingresar Número de Contacto"></InputText>
+               <InputText class="form-control" @bind-Value="@Nurse.NursePhone"
+                  placeholder="Ingresar Número de Contacto"></InputText>
                <ValidationMessage For="@(()=>Nurse.NursePhone)"></ValidationMessage>
             </div>
          </div>
@@ -67,17 +61,20 @@
                <ValidationMessage For="@(()=>Nurse.NurseSpeciality)"></ValidationMessage>
             </div>
             <div class="form-group ml-5 mt-4 mb-3">
-               <input type="checkbox" class="form-check-input" id="estado" @bind="Nurse.NurseStatus" >
+               <input type="checkbox" class="form-check-input" id="estado" @bind="Nurse.NurseStatus">
                <label class="form-check-label" for="estado">Activo</label>
             </div>
          </div>
-
-         <div class="form-group"></div>
-
-         <button class="btn btn-success mt-4 mb-2 ml-5">Guardar</button>
-
+         <div class="row">
+            <div class="form-group ml-5 mb-2 col-5">
+               <p class="mb-0"><strong>Agregue Fotografía</strong></p>
+               <ImageComponent Label="" ImageSelected="ImageSelected" ImageURL="@imageURL"></ImageComponent>
+            </div>
+            <div class="form-group">
+               <button class="btn btn-outline-success mt-4 mb-2 ml-5">Guardar</button>
+            </div>
+         </div>
       </EditForm>
-
    </div>
 </div>
 

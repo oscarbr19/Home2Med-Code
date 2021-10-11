@@ -1,164 +1,163 @@
-<nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-3">
-    <div class="container">
-        <a class="navbar-brand" href="#"><strong>E P S - Creación Familiar a cargo del Paciente</strong></a>
-    </div>
-</nav>
-
 <div class="row justify-content-center align-items-center">
-    <div class="jumbotron1 col-8">
-        <EditForm Model="Relative" OnValidSubmit="OnValidSubmit">
-            <DataAnnotationsValidator></DataAnnotationsValidator>
+   <div class="jumbotron1 col-8">
+      <EditForm Model="Relative" OnValidSubmit="OnValidSubmit">
+         <DataAnnotationsValidator></DataAnnotationsValidator>
 
-            <div class="form-group ml-4 mb-2 col-11">
-                <p class="mb-0"><strong>Nombres y Apellidos</strong></p>
-                <InputText class="form-control" @bind-Value="@Relative.RelativeName"
-                    placeholder="Ingresar Nombres y Apellidos">
-                </InputText>
-                <ValidationMessage For="@(()=>Relative.RelativeName)"></ValidationMessage>
+         <div class="form-group ml-4 mb-2 col-11">
+            <p class="mb-0"><strong>Nombres y Apellidos</strong></p>
+            <InputText class="form-control" @bind-Value="@Relative.RelativeName"
+               placeholder="Ingresar Nombres y Apellidos">
+            </InputText>
+            <ValidationMessage For="@(()=>Relative.RelativeName)"></ValidationMessage>
+         </div>
+
+         <div class="row">
+            <div class="form-group ml-5 mb-2 col-5">
+               <p class="mb-0"><strong>Tipo Documento</strong></p>
+               <select class="form-control" name="select" @bind="@Relative.RelativeDocumentType">
+                  <option value="0" selected>Seleccione una Opción</option>
+                  <option value="1">Cédula de Ciudadanía</option>
+                  <option value="2">Cédula de Extranjería</option>
+                  <option value="3">Pasaporte</option>
+               </select>
+               <ValidationMessage For="@(()=>Relative.RelativeDocumentType)"></ValidationMessage>
             </div>
 
-            <div class="row">
-                <div class="form-group ml-5 mb-2 col-5">
-                    <p class="mb-0"><strong>Tipo Documento</strong></p>
-                    <select class="form-control" name="select" @bind="@Relative.RelativeDocumentType">
-                        <option value="0" selected>Seleccione una Opción</option>
-                        <option value="1">Cédula de Ciudadanía</option>
-                        <option value="2">Cédula de Extranjería</option>
-                        <option value="3">Pasaporte</option>
-                    </select>
-                    <ValidationMessage For="@(()=>Relative.RelativeDocumentType)"></ValidationMessage>
-                </div>
+            <div class="form-group ml-1 mb-2 col-5">
+               <p class="mb-0"><strong>Número de Documento</strong></p>
+               <InputText class="form-control" @bind-Value="@Relative.RelativeDocument"
+                  placeholder="Ingresar Número de Documento"></InputText>
+               <ValidationMessage For="@(()=>Relative.RelativeDocument)"></ValidationMessage>
+            </div>
+         </div>
 
-                <div class="form-group ml-1 mb-2 col-5">
-                    <p class="mb-0"><strong>Número de Documento</strong></p>
-                    <InputText class="form-control" @bind-Value="@Relative.RelativeDocument"
-                        placeholder="Ingresar Número de Documento"></InputText>
-                    <ValidationMessage For="@(()=>Relative.RelativeDocument)"></ValidationMessage>
-                </div>
+         <div class="row">
+            <div class="form-group ml-5 mb-2 col-5">
+               <p class="mb-0"><strong>Genero</strong></p>
+               <select class="form-control" name="select" @bind="@Relative.RelativeGender">
+                  <option value="0" selected>Seleccione una Opción</option>
+                  <option value="1">Femenino</option>
+                  <option value="2">Masculino</option>
+               </select>
+               <ValidationMessage For="@(()=>Relative.RelativeGender)"></ValidationMessage>
+            </div>
+            <div class="form-group ml-1 mb-2 col-5">
+               <p class="mb-0"><strong>Número de Contacto</strong></p>
+               <InputText class="form-control" @bind-Value="@Relative.RelativePhone"
+                  placeholder="Ingresar Número de Contacto"></InputText>
+               <ValidationMessage For="@(()=>Relative.RelativePhone)"></ValidationMessage>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="form-group ml-5 mb-2 col-5">
+               <p class="mb-0"><strong>Relación con el Paciente</strong></p>
+               <select class="form-control" name="selected" @bind="Relative.RelativeRelationship">
+                  <option value="0">Selecciona una Opción</option>
+                  <option value="1">Madre</option>
+                  <option value="2">Padre</option>
+                  <option value="3">Hijo</option>
+                  <option value="4">Hermano</option>
+                  <option value="5">Abuelo</option>
+                  <option value="6">Tio</option>
+                  <option value="7">Amigo</option>
+                  <option value="8">Vecino</option>
+                  <option value="9">Enfermera</option>
+                  @* @foreach (var item in categories)
+                     {
+                     <option value="@item.Id">@item.Name</option>
+                     }
+                  *@
+               </select>
+               <ValidationMessage For="@(()=>Relative.RelativeRelationship)"></ValidationMessage>
             </div>
 
-            <div class="row">
-                <div class="form-group ml-5 mb-2 col-5">
-                    <p class="mb-0"><strong>Genero</strong></p>
-                    <select class="form-control" name="select" @bind="@Relative.RelativeGender">
-                        <option value="0" selected>Seleccione una Opción</option>
-                        <option value="1">Femenino</option>
-                        <option value="2">Masculino</option>
-                    </select>
-                    <ValidationMessage For="@(()=>Relative.RelativeGender)"></ValidationMessage>
-                </div>
-                <div class="form-group ml-1 mb-2 col-5">
-                    <p class="mb-0"><strong>Número de Contacto</strong></p>
-                    <InputText class="form-control" @bind-Value="@Relative.RelativePhone"
-                        placeholder="Ingresar Número de Contacto"></InputText>
-                    <ValidationMessage For="@(()=>Relative.RelativePhone)"></ValidationMessage>
-                </div>
+            <div class="form-group ml-1 mb-2 col-5">
+               <p class="mb-0"><strong>Correo Electrónico</strong></p>
+               <InputText class="form-control" @bind-Value="@Relative.RelativeEmail"
+                  placeholder="Ingresar Correo Electrónico"></InputText>
+               <ValidationMessage For="@(()=>Relative.RelativeEmail)"></ValidationMessage>
             </div>
 
-            <div class="row">
-                <div class="form-group ml-5 mb-2 col-5">
-                    <p class="mb-0"><strong>Relación con el Paciente</strong></p>
-                    <select class="form-control" name="selected" @bind="Relative.RelativeRelationship">
-                        <option value="0">Selecciona una Opción</option>
-                        <option value="1">Madre</option>
-                        <option value="2">Padre</option>
-                        <option value="3">Hijo</option>
-                        <option value="4">Hermano</option>
-                        <option value="5">Abuelo</option>
-                        <option value="6">Tio</option>
-                        <option value="7">Amigo</option>
-                        <option value="8">Vecino</option>
-                        <option value="9">Enfermera</option>
-                        @* @foreach (var item in categories)
-                            {
-                            <option value="@item.Id">@item.Name</option>
-                            }
-                        *@
-                    </select>
-                    <ValidationMessage For="@(()=>Relative.RelativeRelationship)"></ValidationMessage>
-                </div>
-
-                <div class="form-group ml-1 mb-2 col-5">
-                    <p class="mb-0"><strong>Correo Electrónico</strong></p>
-                    <InputText class="form-control" @bind-Value="@Relative.RelativeEmail"
-                        placeholder="Ingresar Correo Electrónico"></InputText>
-                    <ValidationMessage For="@(()=>Relative.RelativeEmail)"></ValidationMessage>
-                </div>
-
+         </div>
+         <div class="row">
+            <div class="form-group ml-5 mb-2 col-5">
+               <p class="mb-0"><strong>Documento del Paciente</strong></p>
+               <InputText class="form-control" @bind-Value="@Relative.RelativePatientDoc"
+                  placeholder="Ingresar Número de Documento del Paciente a cargo"></InputText>
+               <ValidationMessage For="@(()=>Relative.RelativePatientDoc)"></ValidationMessage>
             </div>
-            <div class="row">
-                <div class="form-group ml-5 mb-2 col-5">
-                    <p class="mb-0"><strong>Documento del Paciente</strong></p>
-                    <InputText class="form-control" @bind-Value="@Relative.RelativePatientDoc"
-                        placeholder="Ingresar Número de Documento del Paciente a cargo"></InputText>
-                    <ValidationMessage For="@(()=>Relative.RelativePatientDoc)"></ValidationMessage>
-                </div>
-                <div class="form-group ml-5 mt-4 mb-3">
-                    <input type="checkbox" class="form-check-input" id="estado" @bind="Relative.RelativeStatus">
-                    <label class="form-check-label" for="estado">Activo</label>
-                </div>
+            <div class="form-group ml-5 mt-4 mb-3">
+               <input type="checkbox" class="form-check-input" id="estado" @bind="Relative.RelativeStatus">
+               <label class="form-check-label" for="estado">Activo</label>
             </div>
+         </div>
+         <div class="row">
+            <div class="form-group ml-5 mb-2 col-5">
+               <p class="mb-0"><strong>Agregue Fotografía</strong></p>
+               <ImageComponent Label="" ImageSelected="ImageSelected" ImageURL="@imageURL"></ImageComponent>
+            </div>
+            <div class="form-group">
+               <button class="btn btn-outline-success mt-4 mb-2 ml-5">Guardar</button>
+            </div>
+         </div>
+      </EditForm>
 
-            <div class="form-group"></div>
 
-            <button class="btn btn-success mt-4 mb-2 ml-5">Guardar</button>
-        </EditForm>
-
-
-    </div>
+   </div>
 </div>
 
 @code {
 
-    public class ListDocumentType
-    {
-        public int IdListDocument { get; set; }
-        public string NameTypeDocument { get; set; }
-    }
+   public class ListDocumentType
+   {
+      public int IdListDocument { get; set; }
+      public string NameTypeDocument { get; set; }
+   }
 
-    string imageURL;
+   string imageURL;
 
-    [Parameter] public Relative Relative { get; set; }
-    [Parameter] public EventCallback OnValidSubmit { get; set; }
+   [Parameter] public Relative Relative { get; set; }
+   [Parameter] public EventCallback OnValidSubmit { get; set; }
 
-    protected override void OnInitialized()
-    {
-        if (!string.IsNullOrEmpty(Relative.RelativePhoto))
-        {
-            imageURL = Relative.RelativePhoto;
-            Relative.RelativePhoto = null;
-        }
-    }
+   protected override void OnInitialized()
+   {
+      if (!string.IsNullOrEmpty(Relative.RelativePhoto))
+      {
+         imageURL = Relative.RelativePhoto;
+         Relative.RelativePhoto = null;
+      }
+   }
 
-    private void ImageSelected(string imageB64)
-    {
-        Relative.RelativePhoto = imageB64;
-        imageURL = null;
-    }
+   private void ImageSelected(string imageB64)
+   {
+      Relative.RelativePhoto = imageB64;
+      imageURL = null;
+   }
 
-    public List<ListDocumentType> ListDocument = new List<ListDocumentType>();
+   public List<ListDocumentType> ListDocument = new List<ListDocumentType>();
 
-    protected override Task OnInitializedAsync()
-    {
-        ListDocumentType cero = new ListDocumentType();
-        cero.IdListDocument = 0;
-        cero.NameTypeDocument = "Seleccione una Opción";
-        ListDocumentType uno = new ListDocumentType();
-        uno.IdListDocument = 1;
-        uno.NameTypeDocument = "Cédula de Ciudadanía";
-        ListDocumentType dos = new ListDocumentType();
-        dos.IdListDocument = 2;
-        dos.NameTypeDocument = "Cédula de Extranjería";
-        ListDocumentType tres = new ListDocumentType();
-        tres.IdListDocument = 3;
-        tres.NameTypeDocument = "Pasaporte";
+   protected override Task OnInitializedAsync()
+   {
+      ListDocumentType cero = new ListDocumentType();
+      cero.IdListDocument = 0;
+      cero.NameTypeDocument = "Seleccione una Opción";
+      ListDocumentType uno = new ListDocumentType();
+      uno.IdListDocument = 1;
+      uno.NameTypeDocument = "Cédula de Ciudadanía";
+      ListDocumentType dos = new ListDocumentType();
+      dos.IdListDocument = 2;
+      dos.NameTypeDocument = "Cédula de Extranjería";
+      ListDocumentType tres = new ListDocumentType();
+      tres.IdListDocument = 3;
+      tres.NameTypeDocument = "Pasaporte";
 
-        ListDocument.Add(cero);
-        ListDocument.Add(uno);
-        ListDocument.Add(dos);
-        ListDocument.Add(tres);
+      ListDocument.Add(cero);
+      ListDocument.Add(uno);
+      ListDocument.Add(dos);
+      ListDocument.Add(tres);
 
-        return base.OnInitializedAsync();
-    }
+      return base.OnInitializedAsync();
+   }
 
 }

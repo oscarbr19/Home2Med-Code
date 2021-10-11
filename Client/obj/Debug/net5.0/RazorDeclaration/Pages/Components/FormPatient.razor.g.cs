@@ -13,84 +13,84 @@ namespace Home2Med.Client.Pages.Components
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 1 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 2 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 3 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 4 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 5 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 6 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 7 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 8 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 9 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 10 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 11 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Shared.Entity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Home2Med-Clone\Home2Med-Code\Client\_Imports.razor"
+#line 12 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Client.Services;
 
 #line default
@@ -104,59 +104,59 @@ using Home2Med.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 124 "C:\Home2Med-Clone\Home2Med-Code\Client\Pages\Components\FormPatient.razor"
+#line 123 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\Components\FormPatient.razor"
        
 
-    public class ListDocumentType
-    {
-        public int IdListDocument { get; set; }
-        public string NameTypeDocument { get; set; }
-    }
+   public class ListDocumentType
+   {
+      public int IdListDocument { get; set; }
+      public string NameTypeDocument { get; set; }
+   }
 
-    string imageURL;
+   string imageURL;
 
-    [Parameter] public Patient Patient { get; set; }
-    [Parameter] public EventCallback OnValidSubmit { get; set; }
+   [Parameter] public Patient Patient { get; set; }
+   [Parameter] public EventCallback OnValidSubmit { get; set; }
 
-    protected override void OnInitialized()
-    {
-        if (!string.IsNullOrEmpty(Patient.PatientPhoto))
-        {
-            imageURL = Patient.PatientPhoto;
-            Patient.PatientPhoto = null;
-        }
-    }
+   protected override void OnInitialized()
+   {
+      if (!string.IsNullOrEmpty(Patient.PatientPhoto))
+      {
+         imageURL = Patient.PatientPhoto;
+         Patient.PatientPhoto = null;
+      }
+   }
 
-    private void ImageSelected(string imageB64)
-    {
-        Patient.PatientPhoto = imageB64;
-        imageURL = null;
-    }
+   private void ImageSelected(string imageB64)
+   {
+      Patient.PatientPhoto = imageB64;
+      imageURL = null;
+   }
 
-    public List<ListDocumentType> ListDocument = new List<ListDocumentType>();
+   public List<ListDocumentType> ListDocument = new List<ListDocumentType>();
 
-    protected override Task OnInitializedAsync()
-    {
-        ListDocumentType cero = new ListDocumentType();
-        cero.IdListDocument = 0;
-        cero.NameTypeDocument = "Seleccione una Opción";
-        ListDocumentType uno = new ListDocumentType();
-        uno.IdListDocument = 1;
-        uno.NameTypeDocument = "Cédula de Ciudadanía";
-        ListDocumentType dos = new ListDocumentType();
-        dos.IdListDocument = 2;
-        dos.NameTypeDocument = "Cédula de Extranjería";
-        ListDocumentType tres = new ListDocumentType();
-        tres.IdListDocument = 3;
-        tres.NameTypeDocument = "Pasaporte";
+   protected override Task OnInitializedAsync()
+   {
+      ListDocumentType cero = new ListDocumentType();
+      cero.IdListDocument = 0;
+      cero.NameTypeDocument = "Seleccione una Opción";
+      ListDocumentType uno = new ListDocumentType();
+      uno.IdListDocument = 1;
+      uno.NameTypeDocument = "Cédula de Ciudadanía";
+      ListDocumentType dos = new ListDocumentType();
+      dos.IdListDocument = 2;
+      dos.NameTypeDocument = "Cédula de Extranjería";
+      ListDocumentType tres = new ListDocumentType();
+      tres.IdListDocument = 3;
+      tres.NameTypeDocument = "Pasaporte";
 
-        ListDocument.Add(cero);
-        ListDocument.Add(uno);
-        ListDocument.Add(dos);
-        ListDocument.Add(tres);
+      ListDocument.Add(cero);
+      ListDocument.Add(uno);
+      ListDocument.Add(dos);
+      ListDocument.Add(tres);
 
-        return base.OnInitializedAsync();
-    }
+      return base.OnInitializedAsync();
+   }
 
 
 #line default

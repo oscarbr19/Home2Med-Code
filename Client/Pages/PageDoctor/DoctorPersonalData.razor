@@ -1,9 +1,59 @@
 @page "/doctor/doctorpersonaldata"
 
-<h3>Médico - Datos Personales</h3>
+<nav class="navbar navbar-expand-sm navbar-h2m bg-prima " mb-3>
+   <div class="container">
 
+      <a class="navbar-brand" href="#">Médico - Datos Personales</a>
+   </div>
+</nav>
+<br>
+<div class="row justify-content-center align-items-center">
+   <div class="jumbotron1 col-8">
+      <div>
+         <p class="mb-0 ml-5"><strong>Nombres y Apellidos</strong></p>
+         <p class="caja col-10 ml-5 mb-3">Pedro Piedras</p>
+      </div>
 
-<div class="jumbotron">
-   
+      <div class="row  mb-2">
+         <div class="col-5 ml-5">
+            <p class="mb-0"><strong>Tipo Documento</strong></p>
+            <p class="caja"> Cédula de Ciudadanía</p>
+         </div>
+         <div class="col-5 ml-1">
+            <p class="mb-0"><strong>Número de Documento</strong></p>
+            <p class="caja">12345689</p>
+         </div>
+      </div>
+
+      <div class="row mb-2">
+         <div class="col-5 ml-5">
+            <p class="mb-0"><strong>Genero</strong></p>
+            <p class="caja">Masculino</p>
+         </div>
+         <div class="col-5 ml-1">
+            <p class="mb-0"><strong>Número de Contacto</strong></p>
+            <p class="caja">3104789632</p>
+         </div>
+      </div>
+
+      <div class="row mb-2">
+         <div class="col-5 ml-5">
+            <p class="mb-0"><strong>Especialidad</strong></p>
+            <p class="caja">Especialidad Médica 1</p>
+         </div>
+      </div>
+   </div>
 </div>
 
+@code{
+
+[Parameter] public int Id {get; set;}
+
+}
+
+      @*<div class="form-group ml-4 mb-2 col-10">
+         <p class="mb-0"><strong>Nombres y Apellidos</strong></p>
+         <input type="text" class="form-control" id="patient_name" placeholder="Ingresar Nombres y Apellidos" />
+         @bind-Value="movie_name" @bind-Value:event="oninput"
+            @onkeypress="@((KeyboardEventArgs e)=>MovieSearch(e))" class="form-control" id="movie_name" 
+      </div>*@

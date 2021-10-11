@@ -50,13 +50,13 @@
                         </p>
                      </div>
                   </div>
-                  <div>
+                  @*<div>
                      <button @onclick="DoctorEdit">Editar</button>
-                  </div>
+                  </div>*@
                </div>
             </div>
          </div>
-      }
+      } 
    </div>
 </div>
 
@@ -69,9 +69,11 @@
    [Parameter] public int Id { get; set; }
    [Parameter] public string Name { get; set; }
 
+   public Doctor doctor;
+
    void DoctorEdit()
    {
-      Console.WriteLine($"Editando info Medico ");
+      Console.WriteLine($"Editando info Medico {Id} ");
    }
 
 }
