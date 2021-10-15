@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = Home2Med.Server
-build_property.ProjectDir = f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Server\
+build_property.ProjectDir = F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Server\

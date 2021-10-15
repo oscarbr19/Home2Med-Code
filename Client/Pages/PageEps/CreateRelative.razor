@@ -1,18 +1,31 @@
 @page "/eps/createrelative"
 @using Home2Med.Client.Pages.Components
+@inject IServiceRelative relative_i
+@inject NavigationManager navigationManager
 
 <nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-3">
-    <div class="container">
-        <a class="navbar-brand" href="#"><strong>E P S - Creación Familiar a cargo del Paciente</strong></a>
-    </div>
+   <div class="container">
+      <a class="navbar-brand" href="#"><strong>E P S - Creación Familiar a cargo del Paciente</strong></a>
+   </div>
 </nav>
 
-<FormRelative Relative = "Relative" OnValidSubmit="Create"></FormRelative>
+<FormRelative Relative="Relative" OnValidSubmit="Create"></FormRelative>
 
 @code {
    private Relative Relative = new Relative();
-   void Create()
+
+   private async Task Create()
    {
+      var httpResponse = await relative_i.Post("api/relatives", Relative);
+      if (httpResponse.Error)
+      {
+         var body = await httpResponse.HttpResponseMessage.Content.ReadAsStringAsync();
+         Console.WriteLine(body);
+      }
+      else
+      {
+         navigationManager.NavigateTo("/eps/createrelative");
+      }
       Console.WriteLine($"Nombre {Relative.RelativeName}");
       Console.WriteLine($"Tipo de Documento {Relative.RelativeDocumentType}");
       Console.WriteLine($"Documento {Relative.RelativeDocument}");

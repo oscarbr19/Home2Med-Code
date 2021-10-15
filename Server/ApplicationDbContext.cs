@@ -15,8 +15,8 @@ namespace Home2Med.Server
       public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options):base(options){
       }
       protected override void OnModelCreating(ModelBuilder modelBuilder){
-         /* Establecemos los tipos de relaciones entre las tablas que se van a crear 1 - 1, 1 - *, N - M Creamos una llave primaria compuesta para la tabla CategoryMovie*/
-         modelBuilder.Entity<Doctor>().HasKey(x=> new {x.PatientId});
+         /* Establecemos los tipos de relaciones entre las tablas que se van a crear 1 - 1, 1 - *, N - M Creamos una llave primaria compuesta para la tabla */
+         /*modelBuilder.Entity<Doctor>().HasKey(x=> new {x.PatientId});*/
          base.OnModelCreating(modelBuilder);
       }
    }

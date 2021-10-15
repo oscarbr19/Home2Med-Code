@@ -13,91 +13,91 @@ namespace Home2Med.Client.Pages.PageEps
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
+#line 1 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
+#line 2 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
+#line 3 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
+#line 4 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
+#line 5 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
+#line 6 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
+#line 7 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
+#line 8 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
+#line 9 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
+#line 10 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
+#line 11 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Shared.Entity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
+#line 12 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\_Imports.razor"
 using Home2Med.Client.Services;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\CreateDoctor.razor"
+#line 2 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\CreateDoctor.razor"
 using Home2Med.Client.Pages.Components;
 
 #line default
@@ -112,24 +112,32 @@ using Home2Med.Client.Pages.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 13 "f:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\CreateDoctor.razor"
+#line 14 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\CreateDoctor.razor"
        
    private Doctor Doctor = new Doctor();
-   void Create()
-   {
-      Console.WriteLine($"Nombre {Doctor.Name}");
-      Console.WriteLine($"Tipo de Documento {Doctor.DocumentType}");
-      Console.WriteLine($"Documento {Doctor.Document}");
-      Console.WriteLine($"Genero {Doctor.Gender}");
-      Console.WriteLine($"Telefono {Doctor.Phone}");
-      Console.WriteLine($"Especialidad {Doctor.Speciality}");
-      Console.WriteLine($"Estado {Doctor.Status}");
-
+       private async Task Create(){
+        var httpResponse = await doctor_i.Post("api/doctors", Doctor);
+        if(httpResponse.Error){
+           var body = await httpResponse.HttpResponseMessage.Content.ReadAsStringAsync();
+         Console.WriteLine(body);
+        }else{
+            navigationManager.NavigateTo("/eps/createdoctor");
+        }
+         Console.WriteLine("Creando el Médico : ");
+         Console.WriteLine($"Nombre {Doctor.Name}");
+         Console.WriteLine($"Tipo de Documento {Doctor.DocumentType}");
+         Console.WriteLine($"Documento {Doctor.Document}");
+         Console.WriteLine($"Genero {Doctor.Gender}");
+         Console.WriteLine($"Telefono {Doctor.Phone}");
+         Console.WriteLine($"Especialidad {Doctor.Speciality}");
+         Console.WriteLine($"Estado {Doctor.Status}");
    }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IServiceDoctor doctor_i { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -1,6 +1,7 @@
 @page "/eps/createdoctor"
 @using Home2Med.Client.Pages.Components
-
+@inject IServiceDoctor doctor_i
+@inject NavigationManager navigationManager
 
 <nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-5">
    <div class="container">
@@ -12,15 +13,21 @@
 
 @code {
    private Doctor Doctor = new Doctor();
-   void Create()
-   {
-      Console.WriteLine($"Nombre {Doctor.Name}");
-      Console.WriteLine($"Tipo de Documento {Doctor.DocumentType}");
-      Console.WriteLine($"Documento {Doctor.Document}");
-      Console.WriteLine($"Genero {Doctor.Gender}");
-      Console.WriteLine($"Telefono {Doctor.Phone}");
-      Console.WriteLine($"Especialidad {Doctor.Speciality}");
-      Console.WriteLine($"Estado {Doctor.Status}");
-
+       private async Task Create(){
+        var httpResponse = await doctor_i.Post("api/doctors", Doctor);
+        if(httpResponse.Error){
+           var body = await httpResponse.HttpResponseMessage.Content.ReadAsStringAsync();
+         Console.WriteLine(body);
+        }else{
+            navigationManager.NavigateTo("/eps/createdoctor");
+        }
+         Console.WriteLine("Creando el Médico : ");
+         Console.WriteLine($"Nombre {Doctor.Name}");
+         Console.WriteLine($"Tipo de Documento {Doctor.DocumentType}");
+         Console.WriteLine($"Documento {Doctor.Document}");
+         Console.WriteLine($"Genero {Doctor.Gender}");
+         Console.WriteLine($"Telefono {Doctor.Phone}");
+         Console.WriteLine($"Especialidad {Doctor.Speciality}");
+         Console.WriteLine($"Estado {Doctor.Status}");
    }
 }

@@ -195,13 +195,13 @@
       "mscorlib.dll": "sha256-7WjHY56PbksCp7YOxNV59r6MqLujjAH8vhnMJ+zVezY=",
       "netstandard.dll": "sha256-5TcSqPhm3fAT6s3NH7+BMGakcfGgZGd3\/\/cVwVs2VPI=",
       "System.Private.CoreLib.dll": "sha256-VJv3DLM\/G0m\/RnTeWL9X8mkbxlsn8nNRhm0BHYEY+uo=",
-      "Home2Med.Shared.dll": "sha256-hGOK1T6qI9AJ\/F7ecRKFPKfdV5WpN11qPOgGBE5tS\/4=",
-      "Home2Med.Client.dll": "sha256-G1\/Hrp+YCQrLDxs7drljfYVTO+0k6f+2jVLkegTEdS0="
+      "Home2Med.Shared.dll": "sha256-2CJimbcYIOLx+hY2\/huAhJv\/Dm8gWqR+vyzVlf9lQz0=",
+      "Home2Med.Client.dll": "sha256-oxaVofNVLtXvpMEYiptt9wUEQEFgQhOlalcXnl1n+Cw="
     },
     "lazyAssembly": null,
     "pdb": {
-      "Home2Med.Shared.pdb": "sha256-cxyqX6KZVJBVUmkS2tkSwRUWEze9lJXEg2TurLGHYdA=",
-      "Home2Med.Client.pdb": "sha256-HxiLgV9NqBHKsTziWZh+zBGAS5HCa6tT2YBcuEa80LQ="
+      "Home2Med.Shared.pdb": "sha256-ke3K9KltoihDA2t9v1f5SCHvD1eyPjtv6u5Do0zi6kQ=",
+      "Home2Med.Client.pdb": "sha256-L3Isbr0lxAe+9R58w\/ns5DiYqNUhea+TRVZMoMayJl8="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-PvlHrby1PYtdX46ITs6pB8iDNqXNcewh8Eoa\/Gm2+GM=",

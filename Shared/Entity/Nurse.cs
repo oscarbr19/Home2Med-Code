@@ -23,6 +23,7 @@ namespace Home2Med.Shared.Entity
        public int NurseSpeciality {get;set;}
        public string NursePhoto { get; set; }
        public bool NurseStatus {get;set;}
+       public List <Patient> Patients {get; set;}
     }
   
 }
