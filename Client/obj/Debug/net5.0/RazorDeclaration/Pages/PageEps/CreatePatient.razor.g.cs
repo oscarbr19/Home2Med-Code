@@ -112,11 +112,21 @@ using Home2Med.Client.Pages.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\CreatePatient.razor"
+#line 15 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\CreatePatient.razor"
        
    private Patient Patient = new Patient();
-   void Create()
+private async Task Create()
    {
+      var httpResponse = await patient_i.Post("api/patients", Patient);
+      if (httpResponse.Error)
+      {
+         var body = await httpResponse.HttpResponseMessage.Content.ReadAsStringAsync();
+         Console.WriteLine(body);
+      }
+      else
+      {
+         navigationManager.NavigateTo("/eps/createpatient");
+      }
       Console.WriteLine($"Nombre {Patient.PatientName}");
       Console.WriteLine($"Tipo de Documento {Patient.PatientDocumentType}");
       Console.WriteLine($"Documento {Patient.PatientDocument}");
@@ -134,6 +144,8 @@ using Home2Med.Client.Pages.Components;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IServicePatient patient_i { get; set; }
     }
 }
 #pragma warning restore 1591

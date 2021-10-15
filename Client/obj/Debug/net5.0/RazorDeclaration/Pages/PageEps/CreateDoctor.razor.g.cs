@@ -112,24 +112,32 @@ using Home2Med.Client.Pages.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 13 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\CreateDoctor.razor"
+#line 14 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\CreateDoctor.razor"
        
    private Doctor Doctor = new Doctor();
-   void Create()
-   {
-      Console.WriteLine($"Nombre {Doctor.Name}");
-      Console.WriteLine($"Tipo de Documento {Doctor.DocumentType}");
-      Console.WriteLine($"Documento {Doctor.Document}");
-      Console.WriteLine($"Genero {Doctor.Gender}");
-      Console.WriteLine($"Telefono {Doctor.Phone}");
-      Console.WriteLine($"Especialidad {Doctor.Speciality}");
-      Console.WriteLine($"Estado {Doctor.Status}");
-
+       private async Task Create(){
+        var httpResponse = await doctor_i.Post("api/doctors", Doctor);
+        if(httpResponse.Error){
+           var body = await httpResponse.HttpResponseMessage.Content.ReadAsStringAsync();
+         Console.WriteLine(body);
+        }else{
+            navigationManager.NavigateTo("/eps/createdoctor");
+        }
+         Console.WriteLine("Creando el Médico : ");
+         Console.WriteLine($"Nombre {Doctor.Name}");
+         Console.WriteLine($"Tipo de Documento {Doctor.DocumentType}");
+         Console.WriteLine($"Documento {Doctor.Document}");
+         Console.WriteLine($"Genero {Doctor.Gender}");
+         Console.WriteLine($"Telefono {Doctor.Phone}");
+         Console.WriteLine($"Especialidad {Doctor.Speciality}");
+         Console.WriteLine($"Estado {Doctor.Status}");
    }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IServiceDoctor doctor_i { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -112,11 +112,21 @@ using Home2Med.Client.Pages.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\CreateNurse.razor"
+#line 14 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\CreateNurse.razor"
        
    private Nurse Nurse = new Nurse();
-   void Create()
+   private async Task Create()
    {
+      var httpResponse = await nurse_i.Post("api/nurses", Nurse);
+      if (httpResponse.Error)
+      {
+         var body = await httpResponse.HttpResponseMessage.Content.ReadAsStringAsync();
+         Console.WriteLine(body);
+      }
+      else
+      {
+         navigationManager.NavigateTo("/eps/createnurse");
+      }
       Console.WriteLine($"Nombre {Nurse.NurseName}");
       Console.WriteLine($"Tipo de Documento {Nurse.NurseDocumentType}");
       Console.WriteLine($"Documento {Nurse.NurseDocument}");
@@ -130,6 +140,8 @@ using Home2Med.Client.Pages.Components;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IServiceNurse nurse_i { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -1,11 +1,36 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
 using Home2Med.Shared.Entity;
 
 namespace Home2Med.Client.Services
 {
     public class ServiceRelative : IServiceRelative
     {
+              private readonly HttpClient httpClient;
+
+        public ServiceRelative(HttpClient httpClient)
+        {
+            this.httpClient = httpClient;
+        }
+
+        /* METODOS CREAR */
+        public async Task<HttpResponseWrapper<object>>
+        Post<T>(string url, T send)
+        {
+            var sendJSON = JsonSerializer.Serialize(send);
+            var sendContent =
+                new StringContent(sendJSON, Encoding.UTF8, "application/json");
+            var responseHttp = await httpClient.PostAsync(url, sendContent);
+            return new HttpResponseWrapper<object>(null,
+                !responseHttp.IsSuccessStatusCode,
+                responseHttp);
+        }
+
         public List<Relative> GetRelatives()
         {
             return new List<Relative>()

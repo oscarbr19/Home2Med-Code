@@ -1,5 +1,8 @@
 @page "/eps/createpatient"
 @using Home2Med.Client.Pages.Components
+@inject IServicePatient patient_i
+@inject NavigationManager navigationManager
+
 
 <nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-3">
    <div class="container">
@@ -11,8 +14,18 @@
 
 @code {
    private Patient Patient = new Patient();
-   void Create()
+private async Task Create()
    {
+      var httpResponse = await patient_i.Post("api/patients", Patient);
+      if (httpResponse.Error)
+      {
+         var body = await httpResponse.HttpResponseMessage.Content.ReadAsStringAsync();
+         Console.WriteLine(body);
+      }
+      else
+      {
+         navigationManager.NavigateTo("/eps/createpatient");
+      }
       Console.WriteLine($"Nombre {Patient.PatientName}");
       Console.WriteLine($"Tipo de Documento {Patient.PatientDocumentType}");
       Console.WriteLine($"Documento {Patient.PatientDocument}");

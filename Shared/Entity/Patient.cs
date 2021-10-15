@@ -30,5 +30,6 @@ namespace Home2Med.Shared.Entity
        public int PatientDoctor {get; set;}
        public string PatientPhoto { get; set;}
        public bool PatientStatus { get; set;}
+       public List <Relative> Relatives {get; set;}
     } 
 }

@@ -1,5 +1,7 @@
 @page "/eps/createnurse"
 @using Home2Med.Client.Pages.Components
+@inject IServiceNurse nurse_i
+@inject NavigationManager navigationManager
 
 <nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-3">
    <div class="container">
@@ -7,12 +9,22 @@
    </div>
 </nav>
 
-<FormNurse Nurse = "Nurse" OnValidSubmit="Create"></FormNurse>
+<FormNurse Nurse="Nurse" OnValidSubmit="Create"></FormNurse>
 
 @code {
    private Nurse Nurse = new Nurse();
-   void Create()
+   private async Task Create()
    {
+      var httpResponse = await nurse_i.Post("api/nurses", Nurse);
+      if (httpResponse.Error)
+      {
+         var body = await httpResponse.HttpResponseMessage.Content.ReadAsStringAsync();
+         Console.WriteLine(body);
+      }
+      else
+      {
+         navigationManager.NavigateTo("/eps/createnurse");
+      }
       Console.WriteLine($"Nombre {Nurse.NurseName}");
       Console.WriteLine($"Tipo de Documento {Nurse.NurseDocumentType}");
       Console.WriteLine($"Documento {Nurse.NurseDocument}");

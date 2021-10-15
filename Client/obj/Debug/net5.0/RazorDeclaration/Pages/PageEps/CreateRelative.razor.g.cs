@@ -112,11 +112,22 @@ using Home2Med.Client.Pages.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\CreateRelative.razor"
+#line 14 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\CreateRelative.razor"
        
    private Relative Relative = new Relative();
-   void Create()
+
+   private async Task Create()
    {
+      var httpResponse = await relative_i.Post("api/relatives", Relative);
+      if (httpResponse.Error)
+      {
+         var body = await httpResponse.HttpResponseMessage.Content.ReadAsStringAsync();
+         Console.WriteLine(body);
+      }
+      else
+      {
+         navigationManager.NavigateTo("/eps/createrelative");
+      }
       Console.WriteLine($"Nombre {Relative.RelativeName}");
       Console.WriteLine($"Tipo de Documento {Relative.RelativeDocumentType}");
       Console.WriteLine($"Documento {Relative.RelativeDocument}");
@@ -132,6 +143,8 @@ using Home2Med.Client.Pages.Components;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IServiceRelative relative_i { get; set; }
     }
 }
 #pragma warning restore 1591
