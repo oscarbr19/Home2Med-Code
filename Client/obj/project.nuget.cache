@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ryC8TSlmrbCxhcEYiv7MVYIMohL+EnmiU0SdQPlk4qiak56Eh5MI9WvWjgKJii7/iAvMNLkLIr3EIQY61W6eRw==",
+  "dgSpecHash": "D54He0XRfKEAtKGMCIBfsuhSa8DiXdN+2/vNO7FwScD1EgBTNG0Idpx4jhCn7g2iSrKJZLpO+lLAxhuQNGrJ3g==",
   "success": true,
   "projectFilePath": "F:\\ProysCicloIII\\Home2Med\\clone\\Home2Med-Code\\Client\\Home2Med.Client.csproj",
   "expectedPackageFiles": [
@@ -30,7 +30,7 @@
     "C:\\Users\\jorge\\.nuget\\packages\\microsoft.jsinterop.webassembly\\5.0.10\\microsoft.jsinterop.webassembly.5.0.10.nupkg.sha512",
     "C:\\Users\\jorge\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\jorge\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
-    "C:\\Users\\jorge\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.10\\microsoft.netcore.app.runtime.browser-wasm.5.0.10.nupkg.sha512"
+    "C:\\Users\\jorge\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.11\\microsoft.netcore.app.runtime.browser-wasm.5.0.11.nupkg.sha512"
   ],
   "logs": []
 }

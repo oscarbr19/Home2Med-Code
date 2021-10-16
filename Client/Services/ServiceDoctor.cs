@@ -6,6 +6,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Home2Med.Shared.Entity;
+using Home2Med.Client.Services;
 
 namespace Home2Med.Client.Services
 {
@@ -18,12 +19,91 @@ namespace Home2Med.Client.Services
             this.httpClient = httpClient;
         }
 
+        private JsonSerializerOptions OpcionesPorDefectoJSON =>
+            new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
+
         /* METODOS CREAR */
-        public async Task<HttpResponseWrapper<object>> Post<T>(string url, T send){
+        public async Task<HttpResponseWrapper<object>>
+        Post<T>(string url, T send)
+        {
             var sendJSON = JsonSerializer.Serialize(send);
-            var sendContent = new StringContent(sendJSON, Encoding.UTF8, "application/json");
+            var sendContent =
+                new StringContent(sendJSON, Encoding.UTF8, "application/json");
             var responseHttp = await httpClient.PostAsync(url, sendContent);
-            return new HttpResponseWrapper<object>(null, !responseHttp.IsSuccessStatusCode,responseHttp);
+            return new HttpResponseWrapper<object>(null,
+                !responseHttp.IsSuccessStatusCode,
+                responseHttp);
+        }
+
+        /* Los siguientes dos métodos nos permitiran obtener el Id de la pelicula que acabo de crear */
+        private async Task<T>
+        DeserializarRespuesta<T>(
+            HttpResponseMessage httpResponse,
+            JsonSerializerOptions jsonSerializerOptions
+        )
+        {
+            var responseString = await httpResponse.Content.ReadAsStringAsync();
+            return JsonSerializer
+                .Deserialize<T>(responseString, jsonSerializerOptions);
+        }
+
+        public async Task<HttpResponseWrapper<TResponse>>
+        Post<T, TResponse>(string url, T enviar)
+        {
+            var enviarJSON = JsonSerializer.Serialize(enviar);
+            var enviarContent =
+                new StringContent(enviarJSON,
+                    Encoding.UTF8,
+                    "application/json");
+            var responseHttp = await httpClient.PostAsync(url, enviarContent);
+            if (responseHttp.IsSuccessStatusCode)
+            {
+                var response =
+                    await DeserializarRespuesta<TResponse>(responseHttp,
+                    OpcionesPorDefectoJSON);
+                return new HttpResponseWrapper<TResponse>(response,
+                    false,
+                    responseHttp);
+            }
+            else
+            {
+                return new HttpResponseWrapper<TResponse>(default,
+                    true,
+                    responseHttp);
+            }
+        }
+
+        /* METODO CONSULTAR */
+        public async Task<HttpResponseWrapper<T>> Get<T>(string url)
+        {
+            var responseHTTP = await httpClient.GetAsync(url);
+            if (responseHTTP.IsSuccessStatusCode)
+            {
+                var response =
+                    await DeserializarRespuesta<T>(responseHTTP,
+                    OpcionesPorDefectoJSON);
+                return new HttpResponseWrapper<T>(response,
+                    false,
+                    responseHTTP);
+            }
+            else
+            {
+                return new HttpResponseWrapper<T>(default, true, responseHTTP);
+            }
+        }
+
+        public async Task<HttpResponseWrapper<object>> Put<T>(string url, T enviar)
+        {
+            var enviarJSON = JsonSerializer.Serialize(enviar);
+            var enviarContent = new StringContent(enviarJSON, Encoding.UTF8, "application/json");
+            var responseHttp = await httpClient.PutAsync(url, enviarContent);
+            return new HttpResponseWrapper<object>(null, !responseHttp.IsSuccessStatusCode, responseHttp);
+        }
+
+        public async Task<HttpResponseWrapper<object>> Delete(string url)
+        {
+            var responseHTTP = await httpClient.DeleteAsync(url);
+            return new HttpResponseWrapper<object>(null,!responseHTTP.IsSuccessStatusCode, responseHTTP);
         }
 
         public List<Doctor> GetDoctors()
