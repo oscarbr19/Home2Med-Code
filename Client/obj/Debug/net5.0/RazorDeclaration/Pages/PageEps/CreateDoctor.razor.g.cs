@@ -112,12 +112,13 @@ using Home2Med.Client.Pages.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 14 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\CreateDoctor.razor"
+#line 15 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\CreateDoctor.razor"
        
    private Doctor Doctor = new Doctor();
        private async Task Create(){
         var httpResponse = await doctor_i.Post("api/doctors", Doctor);
         if(httpResponse.Error){
+           await mostrarMensajes.ShowErrorMessage(await httpResponse.GetBody());
            var body = await httpResponse.HttpResponseMessage.Content.ReadAsStringAsync();
          Console.WriteLine(body);
         }else{
@@ -136,6 +137,7 @@ using Home2Med.Client.Pages.Components;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IErrorMessage mostrarMensajes { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IServiceDoctor doctor_i { get; set; }
     }

@@ -1,40 +1,88 @@
-@page "/eps/editdoctor"
+@page "/eps/editdoctor/{Id:int}"
 @using Home2Med.Client.Pages.Components
+@inject IServiceDoctor _doctor
+@inject IErrorMessage showMessage
+@inject NavigationManager navigationManager
 
-<nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-5">
-   <div class="container">
-      <a class="navbar-brand" href="#"><strong>EPS - Editar Médico</strong></a>
-   </div>
-</nav>
+@if (Doctor == null)
+{
+   <div class="alert alert-info" role="alert">Cargando</div>
+}
+else
+{
+   <nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-5">
+      <div class="container">
+         <a class="navbar-brand" href="#"><strong>EPS - Editar Médico</strong></a>
+      </div>
+   </nav>
 
-<FormDoctor Doctor = "Doctor" OnValidSubmit="Edit"></FormDoctor>
+   <FormDoctor Doctor="Doctor" OnValidSubmit="Edit"></FormDoctor>
+}
 
 @code {
 
    [Parameter] public int Id { get; set; }
-   public Doctor Doctor; 
+   private Doctor Doctor;
+   
+   protected async override Task OnInitializedAsync()
+   {
+      var responseHttp = await _doctor.Get<Doctor>($"api/doctors/{Id}");
+      if (responseHttp.Error)
+      {
+         if (responseHttp.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
+         {
+            navigationManager.NavigateTo("doctors");
+         }
+         else
+         {
+            await showMessage.ShowErrorMessage(await responseHttp.GetBody());
+         }
+      }
+      else
+      {
+         Doctor = responseHttp.Response;
+         Console.WriteLine(Doctor.Photo);
+      }
+   }
+   
+   private async Task Edit()
+   {
+      var responseHttp = await _doctor.Put("api/doctors", Doctor);
+      if (responseHttp.Error)
+      {
+         await showMessage.ShowErrorMessage(await responseHttp.GetBody());
+      }
+      else
+      {
+         navigationManager.NavigateTo("doctor/list");
+      }
+   }
 
+}
+
+
+@*
    protected override void OnInitialized()
    {
 
-       Doctor = new Doctor(){
-      
-         Id = 1,
-         Name = "Pedro Piedras",
-         DocumentType = 1,
-         Document = "12345689",
-         Gender = 2,
-         Phone = "3104789632",
-         Speciality = 1,
-         Photo = "/Images/medicos/foto01.jpg",
-         Status = true
-     
-       };
+   Doctor = new Doctor(){
 
-   }   
+   Id = 1,
+   Name = "Pedro Piedras PPPPPPPPP",
+   DocumentType = 1,
+   Document = "12345689",
+   Gender = 2,
+   Phone = "3104789632",
+   Speciality = 1,
+   Photo = "/Images/medicos/foto01.jpg",
+   Status = true
+
+   };
+
+   }
 
    private void Edit()
    {
-      Console.WriteLine($"Editando doctor Id {Doctor.Id}");
+   Console.WriteLine($"Editando doctor Id {Doctor.Id}");
    }
-}
+   }*@

@@ -1,3 +1,4 @@
+
 <div class="row justify-content-center align-items-center">
    <div class="jumbotron1 col-8">
       <EditForm Model="Doctor" OnValidSubmit="OnValidSubmit">
@@ -73,6 +74,7 @@
 
             <div class="form-group">
                <button class="btn btn-outline-success mt-4 mb-2 ml-5 ">Guardar</button>
+               <a href="/doctor/list" class="btn btn-primary mt-4 ml-1">Regresar</a>
             </div>
          </div>
       </EditForm>
@@ -87,16 +89,19 @@
       public string NameTypeDocument { get; set; }
    }
 
-   string imageURL;
+
 
    [Parameter] public Doctor Doctor { get; set; }
    [Parameter] public EventCallback OnValidSubmit { get; set; }
 
+   private string imageURL;
+
    protected override void OnInitialized()
    {
-      if (!string.IsNullOrEmpty(Doctor.Photo))
+      if (!string.IsNullOrWhiteSpace(Doctor.Photo))
       {
          imageURL = Doctor.Photo;
+         Console.WriteLine(imageURL);
          Doctor.Photo = null;
       }
    }
@@ -107,7 +112,7 @@
       imageURL = null;
    }
 
-   public List<ListDocumentType> ListDocument = new List<ListDocumentType>();
+/*   public List<ListDocumentType> ListDocument = new List<ListDocumentType>();
 
    protected override Task OnInitializedAsync()
    {
@@ -131,5 +136,5 @@
 
       return base.OnInitializedAsync();
    }
-
+*/
 }

@@ -1,8 +1,9 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel;
+using System.Text;
 using System.Collections.Generic;
 using System;
-
 
 namespace Home2Med.Shared.Entity
 {

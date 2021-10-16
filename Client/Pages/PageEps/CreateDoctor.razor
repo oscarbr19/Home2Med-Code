@@ -2,6 +2,7 @@
 @using Home2Med.Client.Pages.Components
 @inject IServiceDoctor doctor_i
 @inject NavigationManager navigationManager
+@inject IErrorMessage mostrarMensajes
 
 <nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-5">
    <div class="container">
@@ -16,6 +17,7 @@
        private async Task Create(){
         var httpResponse = await doctor_i.Post("api/doctors", Doctor);
         if(httpResponse.Error){
+           await mostrarMensajes.ShowErrorMessage(await httpResponse.GetBody());
            var body = await httpResponse.HttpResponseMessage.Content.ReadAsStringAsync();
          Console.WriteLine(body);
         }else{

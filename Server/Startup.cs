@@ -1,3 +1,5 @@
+using System.Reflection.Metadata;
+using System.Buffers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Hosting;
@@ -7,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using Home2Med.Server.Storage;
 
 namespace Home2Med.Server
 {
@@ -23,10 +26,14 @@ namespace Home2Med.Server
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options=>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ApplicationDbContext>(options=>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IFilesStorageClass,FilesStorageClass>();
+            services.AddScoped<IFilesStorageClass,FilesLocalStorage>();
+            services.AddHttpContextAccessor(); 
             services.AddControllersWithViews();
             services.AddRazorPages();
-        }
+         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

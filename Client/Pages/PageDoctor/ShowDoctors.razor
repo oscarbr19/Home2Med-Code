@@ -1,0 +1,60 @@
+@page "/doctor/list"
+@using Home2Med.Client.Pages.Components
+@using Home2Med.Shared.Entity
+@inject IServiceDoctor _doctor
+@inject IErrorMessage _showMessage
+
+<nav class="navbar navbar-expand-sm navbar-h2m bg-prima mb-2">
+   <div class="container">
+      <a class="navbar-brand" href="#"><strong>EPS - Listado de Médicos</strong></a>
+   </div>
+</nav>
+
+<GenericList ListResults="Doctors">
+   <ItemsComplete>
+      <table class="table table-striped table-hover">
+         <thead>
+            <tr>
+               <th scope="col">Nombre</th>
+               <th scope="col">Opciones</th>
+            </tr>
+         </thead>
+         <tbody>
+            @foreach (var item in Doctors)
+            {
+               <tr>
+                  <td>@item.Name</td>
+                  <td>
+                      <a href="/eps/editdoctor/@item.Id" class="btn btn-info btn-sm">Editar</a>
+                   @*  <button @onclick="@(()=>DeleteDoctor(item))" class="btn btn-danger btn-sm">Eliminar</button>*@
+                  </td>
+               </tr>
+            }
+         </tbody>
+      </table>
+   </ItemsComplete>
+</GenericList>
+@code {
+   public List<Doctor> Doctors { get; set; }
+   protected async override Task OnInitializedAsync()
+   {
+      await Load();
+   }
+   private async Task Load()
+   {
+      var responseHttp = await _doctor.Get<List<Doctor>>("api/doctors");
+      Doctors = responseHttp.Response;
+   }
+ /*  private async Task DeleteDoctor(Doctor doctor)
+   {
+      var responseHttp = await _doctor.Delete($"api/doctors/{doctor.Id}");
+      if (responseHttp.Error)
+      {
+         await _showMessage.ShowErrorMessage(await responseHttp.GetBody());
+      }
+      else
+      {
+         await Load();
+      }
+   }  */
+}

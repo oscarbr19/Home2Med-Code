@@ -4633,6 +4633,351 @@
         }
       },
       {
+        "HashCode": -584309854,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.Components.GenericList<Titem>",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "GenericList"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Titem",
+            "TypeName": "System.Type",
+            "Documentation": "Specifies the type of the type parameter Titem for the Home2Med.Client.Pages.Components.GenericList<Titem> component.",
+            "Metadata": {
+              "Common.PropertyName": "Titem",
+              "Components.TypeParameter": "True",
+              "Components.TypeParameterIsCascading": "False"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Loading",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Metadata": {
+              "Common.PropertyName": "Loading",
+              "Components.ChildContent": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "NoItems",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Metadata": {
+              "Common.PropertyName": "NoItems",
+              "Components.ChildContent": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ExistsItems",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment<Titem>",
+            "Metadata": {
+              "Common.PropertyName": "ExistsItems",
+              "Components.ChildContent": "True",
+              "Components.GenericTyped": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ItemsComplete",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Metadata": {
+              "Common.PropertyName": "ItemsComplete",
+              "Components.ChildContent": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ListResults",
+            "TypeName": "System.Collections.Generic.List<Titem>",
+            "Metadata": {
+              "Common.PropertyName": "ListResults",
+              "Components.GenericTyped": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Context",
+            "TypeName": "System.String",
+            "Documentation": "Specifies the parameter name for all child content expressions.",
+            "Metadata": {
+              "Components.ChildContentParameterName": "True",
+              "Common.PropertyName": "Context"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.Components.GenericList<Titem>",
+          "Components.GenericTyped": "True"
+        }
+      },
+      {
+        "HashCode": 728535834,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.Components.GenericList<Titem>",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Home2Med.Client.Pages.Components.GenericList"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Titem",
+            "TypeName": "System.Type",
+            "Documentation": "Specifies the type of the type parameter Titem for the Home2Med.Client.Pages.Components.GenericList<Titem> component.",
+            "Metadata": {
+              "Common.PropertyName": "Titem",
+              "Components.TypeParameter": "True",
+              "Components.TypeParameterIsCascading": "False"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Loading",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Metadata": {
+              "Common.PropertyName": "Loading",
+              "Components.ChildContent": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "NoItems",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Metadata": {
+              "Common.PropertyName": "NoItems",
+              "Components.ChildContent": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ExistsItems",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment<Titem>",
+            "Metadata": {
+              "Common.PropertyName": "ExistsItems",
+              "Components.ChildContent": "True",
+              "Components.GenericTyped": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ItemsComplete",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Metadata": {
+              "Common.PropertyName": "ItemsComplete",
+              "Components.ChildContent": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ListResults",
+            "TypeName": "System.Collections.Generic.List<Titem>",
+            "Metadata": {
+              "Common.PropertyName": "ListResults",
+              "Components.GenericTyped": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Context",
+            "TypeName": "System.String",
+            "Documentation": "Specifies the parameter name for all child content expressions.",
+            "Metadata": {
+              "Components.ChildContentParameterName": "True",
+              "Common.PropertyName": "Context"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.Components.GenericList<Titem>",
+          "Components.GenericTyped": "True",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1225577504,
+        "Kind": "Components.ChildContent",
+        "Name": "Home2Med.Client.Pages.Components.GenericList<Titem>.Loading",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Loading",
+            "ParentTag": "GenericList"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Home2Med.Client.Pages.Components.GenericList<Titem>.Loading",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": -1089582706,
+        "Kind": "Components.ChildContent",
+        "Name": "Home2Med.Client.Pages.Components.GenericList<Titem>.Loading",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Loading",
+            "ParentTag": "Home2Med.Client.Pages.Components.GenericList"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Home2Med.Client.Pages.Components.GenericList<Titem>.Loading",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1106345624,
+        "Kind": "Components.ChildContent",
+        "Name": "Home2Med.Client.Pages.Components.GenericList<Titem>.NoItems",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NoItems",
+            "ParentTag": "GenericList"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Home2Med.Client.Pages.Components.GenericList<Titem>.NoItems",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": -1851327866,
+        "Kind": "Components.ChildContent",
+        "Name": "Home2Med.Client.Pages.Components.GenericList<Titem>.NoItems",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NoItems",
+            "ParentTag": "Home2Med.Client.Pages.Components.GenericList"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Home2Med.Client.Pages.Components.GenericList<Titem>.NoItems",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -842167271,
+        "Kind": "Components.ChildContent",
+        "Name": "Home2Med.Client.Pages.Components.GenericList<Titem>.ExistsItems",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ExistsItems",
+            "ParentTag": "GenericList"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.ChildContent",
+            "Name": "Context",
+            "TypeName": "System.String",
+            "Documentation": "Specifies the parameter name for the 'ExistsItems' child content expression.",
+            "Metadata": {
+              "Components.ChildContentParameterName": "True",
+              "Common.PropertyName": "Context"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Home2Med.Client.Pages.Components.GenericList<Titem>.ExistsItems",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": 771045012,
+        "Kind": "Components.ChildContent",
+        "Name": "Home2Med.Client.Pages.Components.GenericList<Titem>.ExistsItems",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ExistsItems",
+            "ParentTag": "Home2Med.Client.Pages.Components.GenericList"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.ChildContent",
+            "Name": "Context",
+            "TypeName": "System.String",
+            "Documentation": "Specifies the parameter name for the 'ExistsItems' child content expression.",
+            "Metadata": {
+              "Components.ChildContentParameterName": "True",
+              "Common.PropertyName": "Context"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Home2Med.Client.Pages.Components.GenericList<Titem>.ExistsItems",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -27760346,
+        "Kind": "Components.ChildContent",
+        "Name": "Home2Med.Client.Pages.Components.GenericList<Titem>.ItemsComplete",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ItemsComplete",
+            "ParentTag": "GenericList"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Home2Med.Client.Pages.Components.GenericList<Titem>.ItemsComplete",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": -1442303184,
+        "Kind": "Components.ChildContent",
+        "Name": "Home2Med.Client.Pages.Components.GenericList<Titem>.ItemsComplete",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ItemsComplete",
+            "ParentTag": "Home2Med.Client.Pages.Components.GenericList"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Home2Med.Client.Pages.Components.GenericList<Titem>.ItemsComplete",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1703115068,
         "Kind": "Components.Component",
         "Name": "Home2Med.Client.Pages.Components.FormDoctor",
@@ -4836,39 +5181,6 @@
         }
       },
       {
-        "HashCode": -1406115119,
-        "Kind": "Components.Component",
-        "Name": "Home2Med.Client.Pages.PageDoctor.Doctor",
-        "AssemblyName": "Home2Med.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Doctor"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Home2Med.Client.Pages.PageDoctor.Doctor"
-        }
-      },
-      {
-        "HashCode": -528724562,
-        "Kind": "Components.Component",
-        "Name": "Home2Med.Client.Pages.PageDoctor.Doctor",
-        "AssemblyName": "Home2Med.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Home2Med.Client.Pages.PageDoctor.Doctor"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Home2Med.Client.Pages.PageDoctor.Doctor",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 793024443,
         "Kind": "Components.Component",
         "Name": "Home2Med.Client.Pages.PageDoctor.DoctorHistoryClinic",
@@ -5050,6 +5362,204 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Home2Med.Client.Pages.PageDoctor.UpdateDoctorHistoryClinic",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1240956461,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageDoctor.Doctores",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Doctores"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageDoctor.Doctores"
+        }
+      },
+      {
+        "HashCode": -1946120713,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageDoctor.Doctores",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Home2Med.Client.Pages.PageDoctor.Doctores"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageDoctor.Doctores",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -447198394,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageDoctor.ShowDoctors",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ShowDoctors"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageDoctor.ShowDoctors"
+        }
+      },
+      {
+        "HashCode": 241521107,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageDoctor.ShowDoctors",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Home2Med.Client.Pages.PageDoctor.ShowDoctors"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageDoctor.ShowDoctors",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1443102829,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageEps.CreateDoctor",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "CreateDoctor"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreateDoctor"
+        }
+      },
+      {
+        "HashCode": 318723523,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageEps.CreateDoctor",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Home2Med.Client.Pages.PageEps.CreateDoctor"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreateDoctor",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1829738091,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageEps.CreateNurse",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "CreateNurse"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreateNurse"
+        }
+      },
+      {
+        "HashCode": -1560081011,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageEps.CreateNurse",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Home2Med.Client.Pages.PageEps.CreateNurse"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreateNurse",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1203750663,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageEps.CreatePatient",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "CreatePatient"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreatePatient"
+        }
+      },
+      {
+        "HashCode": 606667897,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageEps.CreatePatient",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Home2Med.Client.Pages.PageEps.CreatePatient"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreatePatient",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1870722497,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageEps.CreateRelative",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "CreateRelative"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreateRelative"
+        }
+      },
+      {
+        "HashCode": 2051822127,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageEps.CreateRelative",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Home2Med.Client.Pages.PageEps.CreateRelative"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreateRelative",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -5398,6 +5908,39 @@
         }
       },
       {
+        "HashCode": -1796245658,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageEps.Eps",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Eps"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageEps.Eps"
+        }
+      },
+      {
+        "HashCode": 792345563,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageEps.Eps",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Home2Med.Client.Pages.PageEps.Eps"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageEps.Eps",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -1061302577,
         "Kind": "Components.Component",
         "Name": "Home2Med.Client.Pages.PageEps.ReadDoctor",
@@ -5427,6 +5970,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Home2Med.Client.Pages.PageEps.ReadDoctor",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1683799857,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageEps.ReadNurse",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ReadNurse"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageEps.ReadNurse"
+        }
+      },
+      {
+        "HashCode": -1131302638,
+        "Kind": "Components.Component",
+        "Name": "Home2Med.Client.Pages.PageEps.ReadNurse",
+        "AssemblyName": "Home2Med.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Home2Med.Client.Pages.PageEps.ReadNurse"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Home2Med.Client.Pages.PageEps.ReadNurse",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -5493,204 +6069,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Home2Med.Client.Pages.PageEps.ReadRelative",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1796245658,
-        "Kind": "Components.Component",
-        "Name": "Home2Med.Client.Pages.PageEps.Eps",
-        "AssemblyName": "Home2Med.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Eps"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Home2Med.Client.Pages.PageEps.Eps"
-        }
-      },
-      {
-        "HashCode": 792345563,
-        "Kind": "Components.Component",
-        "Name": "Home2Med.Client.Pages.PageEps.Eps",
-        "AssemblyName": "Home2Med.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Home2Med.Client.Pages.PageEps.Eps"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Home2Med.Client.Pages.PageEps.Eps",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1443102829,
-        "Kind": "Components.Component",
-        "Name": "Home2Med.Client.Pages.PageEps.CreateDoctor",
-        "AssemblyName": "Home2Med.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "CreateDoctor"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreateDoctor"
-        }
-      },
-      {
-        "HashCode": 318723523,
-        "Kind": "Components.Component",
-        "Name": "Home2Med.Client.Pages.PageEps.CreateDoctor",
-        "AssemblyName": "Home2Med.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Home2Med.Client.Pages.PageEps.CreateDoctor"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreateDoctor",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1683799857,
-        "Kind": "Components.Component",
-        "Name": "Home2Med.Client.Pages.PageEps.ReadNurse",
-        "AssemblyName": "Home2Med.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ReadNurse"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Home2Med.Client.Pages.PageEps.ReadNurse"
-        }
-      },
-      {
-        "HashCode": -1131302638,
-        "Kind": "Components.Component",
-        "Name": "Home2Med.Client.Pages.PageEps.ReadNurse",
-        "AssemblyName": "Home2Med.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Home2Med.Client.Pages.PageEps.ReadNurse"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Home2Med.Client.Pages.PageEps.ReadNurse",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1829738091,
-        "Kind": "Components.Component",
-        "Name": "Home2Med.Client.Pages.PageEps.CreateNurse",
-        "AssemblyName": "Home2Med.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "CreateNurse"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreateNurse"
-        }
-      },
-      {
-        "HashCode": -1560081011,
-        "Kind": "Components.Component",
-        "Name": "Home2Med.Client.Pages.PageEps.CreateNurse",
-        "AssemblyName": "Home2Med.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Home2Med.Client.Pages.PageEps.CreateNurse"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreateNurse",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1870722497,
-        "Kind": "Components.Component",
-        "Name": "Home2Med.Client.Pages.PageEps.CreateRelative",
-        "AssemblyName": "Home2Med.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "CreateRelative"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreateRelative"
-        }
-      },
-      {
-        "HashCode": 2051822127,
-        "Kind": "Components.Component",
-        "Name": "Home2Med.Client.Pages.PageEps.CreateRelative",
-        "AssemblyName": "Home2Med.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Home2Med.Client.Pages.PageEps.CreateRelative"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreateRelative",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1203750663,
-        "Kind": "Components.Component",
-        "Name": "Home2Med.Client.Pages.PageEps.CreatePatient",
-        "AssemblyName": "Home2Med.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "CreatePatient"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreatePatient"
-        }
-      },
-      {
-        "HashCode": 606667897,
-        "Kind": "Components.Component",
-        "Name": "Home2Med.Client.Pages.PageEps.CreatePatient",
-        "AssemblyName": "Home2Med.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Home2Med.Client.Pages.PageEps.CreatePatient"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Home2Med.Client.Pages.PageEps.CreatePatient",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

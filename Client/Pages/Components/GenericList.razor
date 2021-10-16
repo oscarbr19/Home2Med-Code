@@ -1,0 +1,44 @@
+@typeparam Titem
+@if (ListResults == null)
+{
+   @if (Loading == null)
+   {
+      <label class="text-muted">Cargando</label>
+   }
+   else
+   {
+      @Loading
+   }
+}
+else if (ListResults.Count == 0)
+{
+   @if (NoItems == null)
+   {
+      <label>No existen registros</label>
+   }
+   else
+   {
+      @NoItems
+   }
+}
+else
+{
+   @if (ExistsItems != null)
+   {
+      foreach (var item in ListResults)
+      {
+         @ExistsItems(item)
+      }
+   }
+   else
+   {
+      @ItemsComplete
+   }
+}
+@code {
+   [Parameter] public RenderFragment Loading { get; set; }
+   [Parameter] public RenderFragment NoItems { get; set; }
+   [Parameter] public RenderFragment<Titem> ExistsItems { get; set; }
+   [Parameter] public RenderFragment ItemsComplete { get; set; }
+   [Parameter] public List<Titem> ListResults { get; set; }
+}

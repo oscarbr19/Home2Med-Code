@@ -104,7 +104,7 @@ using Home2Med.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 82 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\Components\FormDoctor.razor"
+#line 84 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\Components\FormDoctor.razor"
        
 
    public class ListDocumentType
@@ -113,16 +113,19 @@ using Home2Med.Client.Services;
       public string NameTypeDocument { get; set; }
    }
 
-   string imageURL;
+
 
    [Parameter] public Doctor Doctor { get; set; }
    [Parameter] public EventCallback OnValidSubmit { get; set; }
 
+   private string imageURL;
+
    protected override void OnInitialized()
    {
-      if (!string.IsNullOrEmpty(Doctor.Photo))
+      if (!string.IsNullOrWhiteSpace(Doctor.Photo))
       {
          imageURL = Doctor.Photo;
+         Console.WriteLine(imageURL);
          Doctor.Photo = null;
       }
    }
@@ -133,7 +136,7 @@ using Home2Med.Client.Services;
       imageURL = null;
    }
 
-   public List<ListDocumentType> ListDocument = new List<ListDocumentType>();
+/*   public List<ListDocumentType> ListDocument = new List<ListDocumentType>();
 
    protected override Task OnInitializedAsync()
    {
@@ -157,7 +160,7 @@ using Home2Med.Client.Services;
 
       return base.OnInitializedAsync();
    }
-
+*/
 
 #line default
 #line hidden

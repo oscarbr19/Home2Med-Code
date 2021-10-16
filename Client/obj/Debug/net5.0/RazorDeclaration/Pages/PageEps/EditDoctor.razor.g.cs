@@ -103,7 +103,7 @@ using Home2Med.Client.Pages.Components;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/eps/editdoctor")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/eps/editdoctor/{Id:int}")]
     public partial class EditDoctor : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -112,39 +112,53 @@ using Home2Med.Client.Pages.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\EditDoctor.razor"
+#line 22 "F:\ProysCicloIII\Home2Med\clone\Home2Med-Code\Client\Pages\PageEps\EditDoctor.razor"
        
 
    [Parameter] public int Id { get; set; }
-   public Doctor Doctor; 
-
-   protected override void OnInitialized()
+   private Doctor Doctor;
+   
+   protected async override Task OnInitializedAsync()
    {
-
-       Doctor = new Doctor(){
-      
-         Id = 1,
-         Name = "Pedro Piedras",
-         DocumentType = 1,
-         Document = "12345689",
-         Gender = 2,
-         Phone = "3104789632",
-         Speciality = 1,
-         Photo = "/Images/medicos/foto01.jpg",
-         Status = true
-     
-       };
-
-   }   
-
-   private void Edit()
-   {
-      Console.WriteLine($"Editando doctor Id {Doctor.Id}");
+      var responseHttp = await _doctor.Get<Doctor>($"api/doctors/{Id}");
+      if (responseHttp.Error)
+      {
+         if (responseHttp.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
+         {
+            navigationManager.NavigateTo("doctors");
+         }
+         else
+         {
+            await showMessage.ShowErrorMessage(await responseHttp.GetBody());
+         }
+      }
+      else
+      {
+         Doctor = responseHttp.Response;
+         Console.WriteLine(Doctor.Photo);
+      }
    }
+   
+   private async Task Edit()
+   {
+      var responseHttp = await _doctor.Put("api/doctors", Doctor);
+      if (responseHttp.Error)
+      {
+         await showMessage.ShowErrorMessage(await responseHttp.GetBody());
+      }
+      else
+      {
+         navigationManager.NavigateTo("doctor/list");
+      }
+   }
+
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IErrorMessage showMessage { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IServiceDoctor _doctor { get; set; }
     }
 }
 #pragma warning restore 1591
